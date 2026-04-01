@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useRef } from 'react';
+import Image from 'next/image';
 import { profile } from '@/data/profile';
 
 const details = [
@@ -42,7 +43,13 @@ export default function About() {
         <div className="about-grid">
           <div className="about-image-wrapper reveal">
             <div className="about-image-container" id="about-image">
-              <div className="about-avatar">SB</div>
+              <Image 
+                src="/shubham.jpeg" 
+                alt="Shubham Bramhane" 
+                fill
+                style={{ objectFit: 'cover' }}
+                priority
+              />
               <div className="image-decoration dec-1" />
               <div className="image-decoration dec-2" />
             </div>
