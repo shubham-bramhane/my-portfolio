@@ -115,7 +115,7 @@ export const projects = [
   },
   {
     id: 4,
-    title: "TMS by Bigbasket",
+    title: "TMS for Bigbasket",
     description:
       "Managed trainer and participant data for a Training Management System (TMS) for Bigbasket, ensuring effective organization and utilization of resources.",
     tags: ["Laravel", "PHP", "MySQL", "Bootstrap"],
@@ -128,7 +128,7 @@ export const projects = [
   },
   {
     id: 5,
-    title: "SEO Engine by Lal Path Lab",
+    title: "SEO Engine for Lal Path Lab",
     description:
       "Developed an advanced SEO engine and management panel for Lal Path Labs, focusing on enhancing online visibility, search engine rankings, and managing dynamic metadata.",
     tags: ["Laravel", "PHP", "SEO", "MySQL"],
