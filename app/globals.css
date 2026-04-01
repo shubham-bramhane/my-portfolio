@@ -468,6 +468,11 @@ img { max-width: 100%; display: block; }
   to { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes fadeInUpCenter {
+  from { opacity: 0; transform: translate(-50%, 30px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
 .scroll-indicator {
   position: absolute;
   bottom: 32px;
@@ -481,7 +486,7 @@ img { max-width: 100%; display: block; }
   font-size: 0.75rem;
   letter-spacing: 2px;
   text-transform: uppercase;
-  animation: fadeInUp 0.8s ease-out 0.8s both;
+  animation: fadeInUpCenter 0.8s ease-out 0.8s both;
 }
 
 .scroll-arrow {
