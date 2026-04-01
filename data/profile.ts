@@ -85,7 +85,7 @@ export const projects = [
     live: "https://admin.oncquestlabs.com/admin",
     image: "/oncquesadmin.png",
     color: "#10b981",
-    period: "2023–2024",
+    period: "2024–2026",
   },
   {
     id: 2,
@@ -98,7 +98,7 @@ export const projects = [
     live: "https://oncquestlabs.com",
     image: "/oncquestfrontend.png",
     color: "#6366f1",
-    period: "2023–2024",
+    period: "2024–2026",
   },
   {
     id: 3,
@@ -111,7 +111,7 @@ export const projects = [
     live: "https://oncqfieldassist.oncquestlabs.com",
     image: "/oncqfieldassist.png",
     color: "#f59e0b",
-    period: "2023–2024",
+    period: "2024–2026",
   },
   {
     id: 4,
