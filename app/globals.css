@@ -529,9 +529,6 @@ img { max-width: 100%; display: block; }
   border-radius: 24px;
   background: var(--gradient-card);
   border: 1px solid var(--border-color);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   overflow: hidden;
 }
 
@@ -1182,7 +1179,7 @@ a.contact-detail-value:hover { color: var(--accent-primary); }
   .skills-categories { grid-template-columns: repeat(2, 1fr); }
   .projects-grid { grid-template-columns: repeat(2, 1fr); }
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
-  .about-image-wrapper { max-width: 350px; margin: 0 auto; }
+  .about-image-wrapper { width: 100%; max-width: 350px; margin: 0 auto; }
   .contact-grid { grid-template-columns: 1fr; gap: 48px; }
 }
 
