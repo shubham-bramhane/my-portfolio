@@ -9,7 +9,7 @@ export const profile = {
   education: "B.E. Computer Engineering (CSE)",
   languages: "English, Hindi, Marathi",
   yearsOfExperience: 4,
-  projectsCompleted: 15,
+  projectsCompleted: 30,
   happyClients: 10,
   bio: "Highly skilled and dedicated Laravel Developer with four years of extensive experience in designing, developing, and maintaining web applications. Proficient in leveraging the Laravel framework to create robust, scalable solutions. Demonstrated expertise in back-end development, database design, RESTful API integration, and front-end collaboration.",
   bioExtended: "Known for a meticulous approach to writing clean, maintainable code and a commitment to following best practices in security and data protection. When not coding, I explore new technologies and build side projects.",
