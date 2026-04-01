@@ -54,10 +54,18 @@ export default function Projects() {
                 <div
                   className="project-image-bg"
                   style={{
-                    background: `linear-gradient(135deg, ${project.color}22, ${project.color}44)`,
+                    background: project.image ? 'none' : `linear-gradient(135deg, ${project.color}22, ${project.color}44)`,
                   }}
                 >
-                  {project.title.split(' ')[0]}
+                  {project.image ? (
+                    <img 
+                      src={project.image} 
+                      alt={project.title} 
+                      style={{ width: '100%', height: '100%', objectFit: 'cover' }} 
+                    />
+                  ) : (
+                    project.title.split(' ')[0]
+                  )}
                 </div>
                 <div className="project-period">{project.period}</div>
                 <div className="project-overlay">
