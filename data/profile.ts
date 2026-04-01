@@ -141,7 +141,7 @@ export const experience = [
     id: 1,
     type: "work",
     title: "Laravel Developer",
-    organization: "Abyne Technologies Pvt. Ltd., Noida",
+    organization: "Abym Technologies Pvt. Ltd., Noida",
     period: "2023 – Present",
     description:
       "Developed and maintained web applications using the Laravel framework. Collaborated with front-end developers to integrate user-facing elements with server-side logic.",
