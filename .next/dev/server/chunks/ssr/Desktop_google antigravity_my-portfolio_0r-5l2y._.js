@@ -172,7 +172,7 @@ module.exports = [
             name: "Shubham Bramhane",
             title: "Laravel Developer & Full-Stack Engineer",
             tagline: "Building Robust, Scalable Web Applications",
-            email: "shubham.bramhane750@gmail.com",
+            email: "shubham.bramhane75@gmail.com",
             phone: "+91 9657916707",
             location: "Chandrapur, Maharashtra",
             website: "https://shubhambramhane.in",
