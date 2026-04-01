@@ -190,7 +190,7 @@
             title: "Laravel Developer & Full-Stack Engineer",
             tagline: "Building Robust, Scalable Web Applications",
             email: "shubham.bramhane75@gmail.com",
-            phone: "+91 9657916707",
+            phone: "+91 8857916707",
             location: "Chandrapur, Maharashtra",
             website: "https://shubhambramhane.in",
             education: "B.E. Computer Engineering (CSE)",
