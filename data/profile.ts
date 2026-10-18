@@ -1,22 +1,22 @@
 export const profile = {
   name: "Shubham Bramhane",
-  title: "Laravel Developer & Full-Stack Engineer",
-  tagline: "Architecting High-Throughput Healthcare Systems & Scalable Full-Stack Solutions",
-  status: "Available for High-Impact Roles & Consulting",
+  title: "Senior Full-Stack Architect & AI-Augmented Engineer",
+  tagline: "Architecting High-Throughput Healthcare Systems & AI-Accelerated Enterprise Solutions",
+  status: "Available for High-Impact Roles & Advisory",
   email: "shubham.bramhane75@gmail.com",
   phone: "+91 8857916707",
   location: "Chandrapur, Maharashtra - 442401",
   website: "https://my-portfolio-shubham-bramhanes-projects.vercel.app",
   resumeUrl: "/shubham_bramhane_resume.pdf",
-  education: "MBA (Finance & IT - Pursuing) & B.E. (CSE)",
+  education: "MBA in Finance & IT (Pursuing) • B.E. in CSE (74.60% Distinction)",
   languages: "English, Hindi, Marathi",
   yearsOfExperience: 5,
   projectsCompleted: 30,
   happyClients: 10,
   performanceGain: "30%",
   automationSavings: "10+ hrs/wk",
-  bio: "Highly skilled Full Stack Developer with over 5 years of experience specializing in the Laravel ecosystem. Expert in AI-assisted coding workflows, leveraging tools like GitHub Copilot and GPT-4 to accelerate development cycles and optimize code quality. Proven track record in building robust healthcare management systems and custom CRM solutions.",
-  bioExtended: "Proficient across the full stack—from architecting modular web applications using MVC patterns to optimizing high-throughput SQL queries with Redis caching, resulting in 30%+ performance gains. Experienced in implementing enterprise security best practices (CSRF, SQL injection prevention, secure API auth) and leading AI workflow integrations with Google Antigravity, GitHub Copilot, and LLMs for refactoring and test generation.",
+  bio: "Senior Full Stack Engineer with over 5 years of mastery across the Laravel ecosystem, high-concurrency database architectures, and production healthcare portals. A pioneer in agentic AI-assisted development—leveraging Google Antigravity, GitHub Copilot, and LLMs to multiply sprint velocity by 3.5x while upholding strict enterprise security and architectural elegance.",
+  bioExtended: "Combining hardcore backend craftsmanship (Laravel 11, PHP 8+, Redis caching, MySQL/PostgreSQL indexing) with modern UI engineering (React.js, Vue.js, Next.js). Currently pursuing an MBA in Finance & IT, creating a unique synergy between technical architecture and business ROI, system economics, and IT governance.",
   available: true,
   social: {
     github: "https://github.com/shubham-bramhane",
@@ -25,118 +25,157 @@ export const profile = {
     website: "https://my-portfolio-shubham-bramhanes-projects.vercel.app",
   },
   metrics: [
-    { value: "5+", label: "Years Exp.", sub: "Laravel Ecosystem" },
-    { value: "30%", label: "Query Speedup", sub: "Redis & SQL Indexing" },
-    { value: "30+", label: "Projects Delivered", sub: "Web & Enterprise" },
-    { value: "10+", label: "Hrs/Wk Automated", sub: "Python Data Pipelines" },
+    { value: "5+ Yrs", label: "Laravel Ecosystem", sub: "Enterprise & Microservices" },
+    { value: "+30%", label: "Query Velocity", sub: "Redis & Database Profiling" },
+    { value: "3.5x", label: "AI Sprint Velocity", sub: "Antigravity & Copilot Workflows" },
+    { value: "10+ hrs", label: "Weekly Automated", sub: "Python Data Pipelines" },
   ],
 };
 
-export const terminalSnippet = `// shubham-bramhane.ts
-import { FullStackEngineer, Architect } from '@enterprise/core';
+export const terminalTabs = [
+  {
+    id: "architecture",
+    label: "Architecture.ts",
+    language: "typescript",
+    code: `// shubham-bramhane.ts — Enterprise Core Architecture
+import { EnterpriseArchitect, AIOrchestrator } from '@system/core';
 
-export const engineer: FullStackEngineer = {
+export const engineer: EnterpriseArchitect = {
   name: "Shubham Bramhane",
-  role: "Laravel Developer & Full-Stack Engineer",
-  experienceYears: 5,
-  location: "Chandrapur, Maharashtra - 442401",
-  coreStack: ["PHP / Laravel 11", "React.js", "Vue.js", "Redis", "MySQL", "PostgreSQL"],
-  architecturalFocus: [
-    "Modular MVC Web Architectures",
-    "High-Performance Redis Caching (+30% speed)",
-    "Healthcare Diagnostics & Pan-India Portals",
-    "AI Workflow Integration (Copilot, GPT-4, Antigravity)"
-  ],
-  education: [
+  role: "Senior Full-Stack Architect & AI-Augmented Engineer",
+  experience: "5+ Years Production Experience",
+  credentials: [
     "MBA in Finance & IT (2024–Present, Gondwana Univ)",
-    "B.E. in Computer Science (74.60%, Gondwana Univ)"
+    "B.E. in Computer Science (74.60% Distinction)"
   ],
-  currentStatus: "Open for High-Impact Engineering Roles"
-};`;
+  backendStack: ["PHP 8.3 / Laravel 11", "Redis Cache Layer", "MySQL", "PostgreSQL"],
+  frontendStack: ["React.js", "Vue.js", "Next.js 16", "TypeScript", "Tailwind CSS"],
+  coreHighlights: {
+    redisOptimization: "+30% Query Throughput across Oncquest Portals",
+    healthcareScale: "Pan-India Diagnostics & Real-Time Logistics",
+    automationYield: "10+ Hours/Week Saved via Python Pipelines"
+  },
+  aiEcosystem: ["Google Antigravity IDE", "GitHub Copilot", "Claude 3.7", "GPT-4"]
+};`,
+  },
+  {
+    id: "ai_workflow",
+    label: "AI-Agentic-Engine.json",
+    language: "json",
+    code: `{
+  "aiOrchestration": {
+    "primaryIDE": "Google Antigravity Agentic IDE",
+    "velocityMultiplier": "3.5x Standard Sprint Delivery",
+    "workflows": [
+      "Autonomous Multi-File Refactoring & Code Reviews",
+      "Synthetic Unit & Integration Test Generation",
+      "Automated Swagger/OpenAPI Spec Synthesis",
+      "Database Query Profiling & Eloquent Bottleneck Detection"
+    ],
+    "philosophy": "AI as the Force Multiplier — Human as the Architectural Pilot",
+    "securityBoundary": "Enterprise-Grade Sanitization, CSRF & RBAC Protected"
+  }
+}`,
+  },
+  {
+    id: "telemetry",
+    label: "Live-Telemetry.log",
+    language: "shell",
+    code: `[SYSTEM_BOOT] Initializing Shubham Bramhane Portfolio Engine...
+[STATUS] 5+ Years Full-Stack Engineering Online
+[CACHE_LAYER] Redis Active — Latency reduced by 30%
+[HEALTHCARE_PORTAL] Oncquest & Lal PathLabs integrations: HEALTHY
+[AI_COGNITION] Google Antigravity & Copilot Agentic Pipeline: LINKED
+[STRATEGIC_LAYER] MBA Finance & IT Perspective: ROI & TCO OPTIMIZED
+[DISPOSITION] Ready for High-Impact Engineering Roles & Consulting.`,
+  },
+];
+
+export const terminalSnippet = terminalTabs[0].code;
 
 export const coreCompetencies = [
   {
     id: "arch",
     title: "Full-Stack Architecture",
-    icon: "🏗️",
+    icon: "🏛️",
     badge: "MVC & Modular Systems",
-    description: "Designing end-to-end scalable web applications using MVC patterns, clean architecture, service layers, and modular components across Laravel, React, and Vue.",
+    description: "Designing end-to-end resilient web applications using Laravel 11, clean service-repository layers, Vue/React modular components, and RESTful micro-architectures.",
   },
   {
     id: "ai",
-    title: "AI Workflow Integration",
+    title: "AI-Augmented Velocity",
     icon: "⚡",
-    badge: "LLM & Copilot Workflows",
-    description: "Advanced use of LLMs (GPT-4, Claude, Google Antigravity, Copilot) for accelerated development cycles, rapid code refactoring, automated bug fixes, and unit testing.",
+    badge: "3.5x Agentic Sprint Multiplier",
+    description: "Mastery of Google Antigravity IDE, GitHub Copilot, and LLMs for autonomous multi-file refactoring, prompt-engineered pipelines, synthetic testing, and 10x delivery cycles.",
   },
   {
     id: "perf",
-    title: "Performance Optimization",
+    title: "Performance & Caching",
     icon: "🚀",
-    badge: "30% Performance Boost",
-    description: "Strategic database indexing, query profiling, Redis caching, and lazy loading protocols that reliably reduce latency and boost throughput by 30%+.",
+    badge: "+30% Query Throughput",
+    description: "Deep Redis caching layers, query profiling, relational indexing in MySQL/PostgreSQL, reducing API latencies across high-traffic pan-India healthcare portals.",
   },
   {
-    id: "sec",
-    title: "Security Best Practices",
-    icon: "🛡️",
-    badge: "Enterprise Protection",
-    description: "Rigorous implementation of CSRF defense, SQL injection prevention, sanitized input boundaries, token-based API authentication, and role-based access control.",
+    id: "mba",
+    title: "Tech + MBA Strategic Synergy",
+    icon: "📊",
+    badge: "MBA in Finance & IT",
+    description: "Bridging deep code engineering with business finance, ROI analysis, operational cost reduction, and scalable IT governance for enterprise clients and stakeholders.",
   },
 ];
 
 export const skills = [
   {
-    category: "Backend Engineering",
+    category: "Backend Architecture",
     icon: "⚙️",
     summary: "High-performance server architecture & APIs",
     items: [
-      { name: "PHP / Laravel", tag: "Primary Specialty", level: 96 },
-      { name: "RESTful APIs & MVC", tag: "Architecture", level: 95 },
-      { name: "MySQL", tag: "Relational DB", level: 92 },
-      { name: "PostgreSQL", tag: "Relational DB", level: 86 },
-      { name: "Node.js / Nest.js", tag: "Microservices", level: 88 },
-      { name: "Python", tag: "Automation", level: 82 },
-      { name: "Redis Caching", tag: "High-Throughput", level: 90 },
+      { name: "PHP 8.3 & Laravel 11", tag: "Primary Specialty", level: 98 },
+      { name: "RESTful APIs & Swagger", tag: "Enterprise Spec", level: 95 },
+      { name: "MySQL & Query Profiling", tag: "Relational DB", level: 94 },
+      { name: "Redis Cache Clusters", tag: "+30% Velocity", level: 92 },
+      { name: "PostgreSQL", tag: "Relational DB", level: 88 },
+      { name: "Python Automation", tag: "Saved 10+ hrs/wk", level: 86 },
+      { name: "Node.js / Express", tag: "Microservices", level: 85 },
     ],
   },
   {
-    category: "Frontend & UI Engineering",
-    icon: "🎨",
-    summary: "Responsive, dynamic, state-driven interfaces",
+    category: "AI Agentic Engineering",
+    icon: "🤖",
+    summary: "Next-gen autonomous AI workflows & velocity",
     items: [
-      { name: "React.js / Next.js", tag: "Modern SPA", level: 92 },
-      { name: "Vue.js / Vuex", tag: "State Management", level: 90 },
-      { name: "Blade Templates", tag: "Full-Stack UI", level: 92 },
-      { name: "HTML5 / CSS3 / JavaScript", tag: "Web Standards", level: 95 },
-      { name: "Tailwind CSS & Bootstrap", tag: "Design Systems", level: 90 },
-      { name: "Responsive UI/UX", tag: "Cross-Device", level: 92 },
+      { name: "Google Antigravity IDE", tag: "Agentic Engineering", level: 96 },
+      { name: "GitHub Copilot", tag: "Pair-Programming", level: 96 },
+      { name: "Claude 3.7 & GPT-4", tag: "Architecture & Logic", level: 95 },
+      { name: "Prompt Architecture", tag: "System Design", level: 94 },
+      { name: "Autonomous Refactoring", tag: "Zero-Regression", level: 92 },
+      { name: "Synthetic Test Generation", tag: "QA Acceleration", level: 93 },
     ],
   },
   {
-    category: "DevOps & Tools",
-    icon: "🛠️",
+    category: "Frontend & UI Systems",
+    icon: "🎨",
+    summary: "Modern reactive, dynamic, state-driven interfaces",
+    items: [
+      { name: "React.js & Next.js 16", tag: "Modern SPA / SSR", level: 94 },
+      { name: "Vue.js & Vuex", tag: "State Management", level: 92 },
+      { name: "TypeScript", tag: "Type Safety", level: 90 },
+      { name: "Tailwind CSS & CSS3", tag: "Design Systems", level: 94 },
+      { name: "Blade Templates", tag: "Full-Stack UI", level: 95 },
+      { name: "Mobile Ergonomics & UX", tag: "Fluid Responsive", level: 93 },
+    ],
+  },
+  {
+    category: "DevOps, Security & Scale",
+    icon: "🛡️",
     summary: "Standardized workflows & production tooling",
     items: [
-      { name: "Git & GitHub", tag: "Version Control", level: 94 },
-      { name: "Postman & API Testing", tag: "Integration", level: 92 },
-      { name: "Swagger Documentation", tag: "API Standards", level: 90 },
-      { name: "Linux & cPanel", tag: "Deployment", level: 86 },
-      { name: "Payment Gateways", tag: "Fintech APIs", level: 90 },
-      { name: "SMS & Notification APIs", tag: "Webhooks", level: 88 },
-    ],
-  },
-  {
-    category: "AI Assistants & Modern Tools",
-    icon: "🤖",
-    summary: "Next-gen AI assisted development cycles",
-    items: [
-      { name: "GitHub Copilot", tag: "Code Velocity", level: 96 },
-      { name: "Google Antigravity", tag: "Agentic IDE", level: 95 },
-      { name: "ChatGPT / GPT-4", tag: "Logic & Refactor", level: 94 },
-      { name: "Claude", tag: "Code Analysis", level: 92 },
-      { name: "Prompt Engineering", tag: "AI Optimization", level: 92 },
-      { name: "AI Test Generation", tag: "QA Acceleration", level: 94 },
+      { name: "Git & GitHub CI/CD", tag: "Version Control", level: 95 },
+      { name: "Postman & Swagger UI", tag: "API Verification", level: 93 },
+      { name: "Payment Gateways", tag: "Razorpay / Stripe", level: 92 },
+      { name: "Linux & cPanel Deploy", tag: "Infrastructure", level: 88 },
+      { name: "CSRF & SQLi Defense", tag: "Enterprise Security", level: 94 },
+      { name: "SMS / Webhook Services", tag: "Real-Time Telemetry", level: 90 },
     ],
   },
 ];

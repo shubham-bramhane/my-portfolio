@@ -1,21 +1,25 @@
 'use client';
 import { useState } from 'react';
 import Image from 'next/image';
-import { profile, terminalSnippet } from '@/data/profile';
+import { profile, terminalTabs } from '@/data/profile';
 
 const techBadges = [
   'PHP / Laravel 11',
-  'React.js & Vue.js',
-  'Redis (+30% Speed)',
-  'MySQL / PostgreSQL',
-  'AI Copilot & Antigravity',
+  'Redis (+30% Velocity)',
+  'React.js & Next.js',
+  'PostgreSQL / MySQL',
+  'Google Antigravity & Copilot',
+  'MBA in Finance & IT',
 ];
 
 export default function Hero() {
+  const [activeTabId, setActiveTabId] = useState('architecture');
   const [copied, setCopied] = useState(false);
 
+  const activeTab = terminalTabs.find((t) => t.id === activeTabId) || terminalTabs[0];
+
   const handleCopyCode = () => {
-    navigator.clipboard.writeText(terminalSnippet);
+    navigator.clipboard.writeText(activeTab.code);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);
   };
@@ -24,8 +28,8 @@ export default function Hero() {
     <section id="hero" className="hero-neo-section">
       {/* Background ambient lighting */}
       <div className="ambient-mesh">
-        <div className="mesh-glow glow-emerald" />
-        <div className="mesh-glow glow-cyan" />
+        <div className="mesh-glow glow-amber" />
+        <div className="mesh-glow glow-indigo" />
         <div className="mesh-glow glow-violet" />
         <div className="cyber-grid" />
       </div>
@@ -41,6 +45,11 @@ export default function Hero() {
                 <span className="beacon-text">{profile.status}</span>
               </div>
 
+              <div className="ai-velocity-beacon">
+                <span className="ai-beacon-spark">⚡</span>
+                <span>3.5x AI Velocity</span>
+              </div>
+
               <div className="hero-avatar-pill-mobile">
                 <div className="mini-avatar-wrap">
                   <Image src="/shubham.jpeg" alt="Shubham" width={26} height={26} style={{ borderRadius: '50%', objectFit: 'cover' }} priority />
@@ -50,7 +59,7 @@ export default function Hero() {
             </div>
 
             <h1 className="hero-main-title">
-              Crafting <span className="gradient-shimmer">High-Throughput</span> Web Architectures &amp; Enterprise Systems.
+              Architecting <span className="gradient-shimmer">High-Throughput</span> Systems with AI-Augmented Velocity.
             </h1>
 
             <p className="hero-role-callout">
@@ -58,7 +67,7 @@ export default function Hero() {
               <span className="role-sep">•</span>
               <span>5+ Years Experience</span>
               <span className="role-sep">•</span>
-              <span>Healthcare &amp; CRM Specialist</span>
+              <span>MBA in Finance &amp; IT</span>
             </p>
 
             <p className="hero-subtext">
@@ -84,7 +93,7 @@ export default function Hero() {
                   document.getElementById('projects')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                <span>Explore Featured Work</span>
+                <span>Explore Architectural Work</span>
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
@@ -113,12 +122,12 @@ export default function Hero() {
                   document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
                 }}
               >
-                <span>Get In Touch</span>
+                <span>Initiate Contact</span>
               </a>
             </div>
           </div>
 
-          {/* Right Column: Interactive Developer Terminal */}
+          {/* Right Column: Interactive Developer & AI Terminal */}
           <div className="hero-right">
             <div className="terminal-card">
               <div className="terminal-header">
@@ -127,13 +136,19 @@ export default function Hero() {
                   <span className="dot dot-yellow" />
                   <span className="dot dot-green" />
                 </div>
-                <div className="terminal-tab">
-                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <polyline points="16 18 22 12 16 6" />
-                    <polyline points="8 6 2 12 8 18" />
-                  </svg>
-                  <span>shubham-bramhane.ts</span>
+
+                <div className="terminal-tabs-selector">
+                  {terminalTabs.map((tab) => (
+                    <button
+                      key={tab.id}
+                      className={`terminal-tab-btn${activeTabId === tab.id ? ' active' : ''}`}
+                      onClick={() => setActiveTabId(tab.id)}
+                    >
+                      <span>{tab.label}</span>
+                    </button>
+                  ))}
                 </div>
+
                 <button
                   className="terminal-copy-btn"
                   onClick={handleCopyCode}
@@ -153,37 +168,17 @@ export default function Hero() {
 
               <div className="terminal-body">
                 <pre className="terminal-code">
-                  <code>
-                    <span className="c-comment">// shubham-bramhane.ts</span>{'\n'}
-                    <span className="c-keyword">import</span> {'{'} <span className="c-type">FullStackEngineer</span> {'}'} <span className="c-keyword">from</span> <span className="c-string">&apos;@enterprise/core&apos;</span>;{'\n\n'}
-                    <span className="c-keyword">export const</span> <span className="c-var">engineer</span> = {'{'}{'\n'}
-                    {'  '}name: <span className="c-string">&apos;Shubham Bramhane&apos;</span>,{'\n'}
-                    {'  '}role: <span className="c-string">&apos;Laravel Developer &amp; Full-Stack Engineer&apos;</span>,{'\n'}
-                    {'  '}experience: <span className="c-number">&apos;5+ Years&apos;</span>,{'\n'}
-                    {'  '}location: <span className="c-string">&apos;Chandrapur, Maharashtra - 442401&apos;</span>,{'\n'}
-                    {'  '}stack: [{'\n'}
-                    {'    '}<span className="c-string">&apos;PHP / Laravel 11&apos;</span>, <span className="c-string">&apos;React.js&apos;</span>, <span className="c-string">&apos;Vue.js&apos;</span>,{'\n'}
-                    {'    '}<span className="c-string">&apos;Redis Caching&apos;</span>, <span className="c-string">&apos;MySQL&apos;</span>, <span className="c-string">&apos;PostgreSQL&apos;</span>{'\n'}
-                    {'  '}],{'\n'}
-                    {'  '}provenImpact: {'{'}{'\n'}
-                    {'    '}queryOptimization: <span className="c-string">&apos;+30% Speed Boost with Redis&apos;</span>,{'\n'}
-                    {'    '}healthcareSystems: <span className="c-string">&apos;Oncquest &amp; Lal Path Labs&apos;</span>,{'\n'}
-                    {'    '}aiAccelerators: <span className="c-string">&apos;Copilot, Antigravity, GPT-4&apos;</span>{'\n'}
-                    {'  '}{'}'},{'\n'}
-                    {'  '}education: <span className="c-string">&apos;MBA (Finance &amp; IT) &amp; B.E. (CSE)&apos;</span>,{'\n'}
-                    {'  '}status: <span className="c-accent">&apos;Ready for High-Impact Challenges&apos;</span>{'\n'}
-                    {'}'};
-                  </code>
+                  <code>{activeTab.code}</code>
                 </pre>
               </div>
 
               <div className="terminal-footer">
                 <div className="footer-status">
                   <span className="status-live-dot" />
-                  <span>Production Ready • TypeScript 5.0</span>
+                  <span>Production Ready • AI-Assisted Architecture</span>
                 </div>
                 <div className="footer-metric">
-                  <span className="metric-pill">+30% Query Velocity</span>
+                  <span className="metric-pill">+30% Query Throughput</span>
                 </div>
               </div>
             </div>
