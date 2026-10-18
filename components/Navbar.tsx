@@ -110,6 +110,14 @@ export default function Navbar() {
           </button>
         </div>
       </nav>
+
+      {menuOpen && (
+        <div
+          className="nav-backdrop"
+          onClick={() => setMenuOpen(false)}
+          aria-hidden="true"
+        />
+      )}
     </header>
   );
 }

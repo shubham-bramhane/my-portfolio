@@ -1,5 +1,6 @@
 'use client';
 import { useState } from 'react';
+import Image from 'next/image';
 import { profile, terminalSnippet } from '@/data/profile';
 
 const techBadges = [
@@ -33,10 +34,19 @@ export default function Hero() {
         <div className="hero-split-grid">
           {/* Left Column: Headline & Value Prop */}
           <div className="hero-left">
-            <div className="status-beacon-badge">
-              <span className="beacon-ping" />
-              <span className="beacon-core" />
-              <span className="beacon-text">{profile.status}</span>
+            <div className="hero-badges-row">
+              <div className="status-beacon-badge">
+                <span className="beacon-ping" />
+                <span className="beacon-core" />
+                <span className="beacon-text">{profile.status}</span>
+              </div>
+
+              <div className="hero-avatar-pill-mobile">
+                <div className="mini-avatar-wrap">
+                  <Image src="/shubham.jpeg" alt="Shubham" width={26} height={26} style={{ borderRadius: '50%', objectFit: 'cover' }} priority />
+                </div>
+                <span>Shubham B.</span>
+              </div>
             </div>
 
             <h1 className="hero-main-title">
