@@ -11,25 +11,16 @@ export default function Skills() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             entry.target.classList.add('visible');
-            // Animate skill bars
-            const bars = entry.target.querySelectorAll<HTMLElement>('.skill-bar-fill');
-            bars.forEach((bar) => {
-              const width = bar.getAttribute('data-width');
-              setTimeout(() => {
-                bar.style.width = `${width}%`;
-              }, 200);
-            });
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
     );
 
     const el = containerRef.current;
     if (el) {
-      el.querySelectorAll('.skill-category').forEach((cat) => {
-        cat.classList.add('reveal');
-        observer.observe(cat);
+      el.querySelectorAll('.skill-bento-card').forEach((card) => {
+        observer.observe(card);
       });
     }
 
@@ -37,39 +28,63 @@ export default function Skills() {
   }, []);
 
   return (
-    <section id="skills" className="section">
+    <section id="skills" className="section-neo skills-neo-section">
       <div className="container">
-        <div className="section-header">
-          <span className="section-tag">What I do</span>
-          <h2 className="section-title">
-            My <span className="gradient-text">Skills</span>
+        <div className="section-head-neo">
+          <div className="section-eyebrow">
+            <span className="eyebrow-dot" />
+            <span>Technical Capabilities</span>
+          </div>
+          <h2 className="section-headline">
+            Skills &amp; <span className="gradient-shimmer">Tech Stack</span>
           </h2>
+          <p className="section-subheadline">
+            Battle-tested technologies and AI accelerators powering robust, production-grade applications.
+          </p>
         </div>
 
-        <div className="skills-categories reveal-stagger" ref={containerRef}>
-          {skills.map((category) => (
-            <div className="skill-category" key={category.category}>
-              <div className="category-header">
-                <span className="category-icon">{category.icon}</span>
-                <h3 className="category-title">{category.category}</h3>
-              </div>
-              {category.items.map((skill) => (
-                <div className="skill-item" key={skill.name}>
-                  <div className="skill-info">
-                    <span className="skill-name">{skill.name}</span>
-                    <span className="skill-percent">{skill.level}%</span>
+        <div className="skills-bento-grid" ref={containerRef}>
+          {skills.map((category, idx) => {
+            const isAi = category.category.toLowerCase().includes('ai');
+            return (
+              <div
+                className={`skill-bento-card reveal-on-scroll${isAi ? ' card-ai-glow' : ''}`}
+                key={category.category}
+                style={{ animationDelay: `${idx * 0.1}s` }}
+              >
+                <div className="skill-card-head">
+                  <div className="category-icon-box">{category.icon}</div>
+                  <div>
+                    <h3 className="category-title-neo">{category.category}</h3>
+                    <p className="category-sub">{category.summary}</p>
                   </div>
-                  <div className="skill-bar">
-                    <div
-                      className="skill-bar-fill"
-                      data-width={skill.level}
-                      style={{ width: 0 }}
-                    />
-                  </div>
+                  {isAi && <span className="ai-highlight-pill">⚡ Supercharged</span>}
                 </div>
-              ))}
-            </div>
-          ))}
+
+                <div className="skill-chips-cloud">
+                  {category.items.map((skill) => (
+                    <div className="skill-chip-item" key={skill.name}>
+                      <div className="chip-content">
+                        <span className="chip-name">{skill.name}</span>
+                        {skill.tag && <span className="chip-tag-pill">{skill.tag}</span>}
+                      </div>
+                      <div className="chip-level-bar">
+                        <div
+                          className="chip-level-fill"
+                          style={{ width: `${skill.level}%` }}
+                        />
+                      </div>
+                    </div>
+                  ))}
+                </div>
+
+                <div className="skill-card-footer">
+                  <span className="footer-count">{category.items.length} Technologies</span>
+                  <span className="footer-status-pill">Production Ready</span>
+                </div>
+              </div>
+            );
+          })}
         </div>
       </div>
     </section>
