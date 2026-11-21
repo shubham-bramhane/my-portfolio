@@ -25,10 +25,10 @@ export const profile = {
     website: "https://my-portfolio-shubham-bramhanes-projects.vercel.app",
   },
   metrics: [
-    { value: "5+ Yrs", label: "Laravel Ecosystem", sub: "Enterprise & Microservices" },
-    { value: "+30%", label: "Query Velocity", sub: "Redis & Database Profiling" },
-    { value: "3.5x", label: "AI Sprint Velocity", sub: "Antigravity & Copilot Workflows" },
-    { value: "10+ hrs", label: "Weekly Automated", sub: "Python Data Pipelines" },
+    { value: "5+ Yrs", label: "Laravel Ecosystem", sub: "Enterprise & Microservices", statPct: 98, accent: "aqua" },
+    { value: "+30%", label: "Query Velocity", sub: "Redis & Database Profiling", statPct: 92, accent: "pink" },
+    { value: "3.5x", label: "AI Sprint Velocity", sub: "Antigravity & Copilot Ops", statPct: 96, accent: "gold" },
+    { value: "10+ hrs", label: "Weekly Automated", sub: "Python Data Pipelines", statPct: 90, accent: "coral" },
   ],
 };
 
@@ -37,57 +37,56 @@ export const terminalTabs = [
     id: "architecture",
     label: "Architecture.ts",
     language: "typescript",
-    code: `// shubham-bramhane.ts — Enterprise Core Architecture
-import { EnterpriseArchitect, AIOrchestrator } from '@system/core';
+    code: `// LEONIDA.NET // GRAND THEFT CODE VI — shubham-bramhane.ts
+import { EnterpriseArchitect, AIOrchestrator } from '@leonida/vice-core';
 
-export const engineer: EnterpriseArchitect = {
+export const playerVI: EnterpriseArchitect = {
   name: "Shubham Bramhane",
   role: "Senior Full-Stack Architect & AI-Augmented Engineer",
-  experience: "5+ Years Production Experience",
+  rating: "★★★★★★ (5+ Years Production Experience)",
   credentials: [
     "MBA in Finance & IT (2024–Present, Gondwana Univ)",
     "B.E. in Computer Science (74.60% Distinction)"
   ],
-  backendStack: ["PHP 8.3 / Laravel 11", "Redis Cache Layer", "MySQL", "PostgreSQL"],
-  frontendStack: ["React.js", "Vue.js", "Next.js 16", "TypeScript", "Tailwind CSS"],
-  coreHighlights: {
-    redisOptimization: "+30% Query Throughput across Oncquest Portals",
-    healthcareScale: "Pan-India Diagnostics & Real-Time Logistics",
-    automationYield: "10+ Hours/Week Saved via Python Pipelines"
+  backend: ["PHP 8.3 / Laravel 11", "Redis Cache", "MySQL", "PostgreSQL"],
+  frontend: ["React.js", "Vue.js", "Next.js 16", "TypeScript", "CSS3"],
+  highlights: {
+    redisTurbo: "+30% Query Throughput across Oncquest Portals",
+    healthcareOps: "Pan-India Diagnostics & Real-Time Logistics",
+    autoPipeline: "10+ Hours/Week Saved via Python Automation"
   },
-  aiEcosystem: ["Google Antigravity IDE", "GitHub Copilot", "Claude 3.7", "GPT-4"]
+  aiArsenal: ["Google Antigravity", "GitHub Copilot", "Claude 3.7", "GPT-4"]
 };`,
   },
   {
     id: "ai_workflow",
-    label: "AI-Agentic-Engine.json",
+    label: "AI-Engine.json",
     language: "json",
     code: `{
-  "aiOrchestration": {
-    "primaryIDE": "Google Antigravity Agentic IDE",
-    "velocityMultiplier": "3.5x Standard Sprint Delivery",
-    "workflows": [
-      "Autonomous Multi-File Refactoring & Code Reviews",
-      "Synthetic Unit & Integration Test Generation",
-      "Automated Swagger/OpenAPI Spec Synthesis",
-      "Database Query Profiling & Eloquent Bottleneck Detection"
-    ],
-    "philosophy": "AI as the Force Multiplier — Human as the Architectural Pilot",
-    "securityBoundary": "Enterprise-Grade Sanitization, CSRF & RBAC Protected"
-  }
+  "edition": "GTA_VI_LEONIDA_3D",
+  "primaryIDE": "Google Antigravity Agentic IDE",
+  "velocityMultiplier": "3.5x Standard Sprint Delivery",
+  "workflows": [
+    "Autonomous Multi-File Refactoring & Code Reviews",
+    "Synthetic Unit & Integration Test Generation",
+    "Automated Swagger/OpenAPI Spec Synthesis",
+    "Database Query Profiling & Eloquent Optimization"
+  ],
+  "creed": "AI as the Force Multiplier — Human as the Architect",
+  "security": "Enterprise Sanitization, CSRF, SQLi & RBAC Hardened"
 }`,
   },
   {
     id: "telemetry",
-    label: "Live-Telemetry.log",
+    label: "Live.log",
     language: "shell",
-    code: `[SYSTEM_BOOT] Initializing Shubham Bramhane Portfolio Engine...
-[STATUS] 5+ Years Full-Stack Engineering Online
-[CACHE_LAYER] Redis Active — Latency reduced by 30%
-[HEALTHCARE_PORTAL] Oncquest & Lal PathLabs integrations: HEALTHY
-[AI_COGNITION] Google Antigravity & Copilot Agentic Pipeline: LINKED
-[STRATEGIC_LAYER] MBA Finance & IT Perspective: ROI & TCO OPTIMIZED
-[DISPOSITION] Ready for High-Impact Engineering Roles & Consulting.`,
+    code: `[VICE_NET_VI] Booting Leonida 3D Dev Node (Chandrapur, MH)...
+[PLAYER_STATUS] 6-Star Full-Stack Architect ONLINE
+[TURBO_CACHE] Redis Cluster Active — Latency reduced by 30%
+[HEALTHCARE_OPS] Oncquest & Lal PathLabs portals: HEALTHY
+[AI_PIPELINE] Google Antigravity & Copilot: CHARGED 100%
+[MBA_SYNERGY] Finance & IT Governance: ROI & TCO OPTIMIZED
+[DISPOSITION] Ready for High-Impact Engineering & Advisory.`,
   },
 ];
 
@@ -98,28 +97,28 @@ export const coreCompetencies = [
     id: "arch",
     title: "Full-Stack Architecture",
     icon: "🏛️",
-    badge: "MVC & Modular Systems",
+    badge: "Vice Core Ops",
     description: "Designing end-to-end resilient web applications using Laravel 11, clean service-repository layers, Vue/React modular components, and RESTful micro-architectures.",
   },
   {
     id: "ai",
     title: "AI-Augmented Velocity",
     icon: "⚡",
-    badge: "3.5x Agentic Sprint Multiplier",
-    description: "Mastery of Google Antigravity IDE, GitHub Copilot, and LLMs for autonomous multi-file refactoring, prompt-engineered pipelines, synthetic testing, and 10x delivery cycles.",
+    badge: "3.5x Overdrive",
+    description: "Mastery of Google Antigravity IDE, GitHub Copilot, and LLMs for autonomous multi-file refactoring, prompt-engineered pipelines, synthetic testing, and rapid delivery cycles.",
   },
   {
     id: "perf",
     title: "Performance & Caching",
     icon: "🚀",
-    badge: "+30% Query Throughput",
+    badge: "+30% Turbo Boost",
     description: "Deep Redis caching layers, query profiling, relational indexing in MySQL/PostgreSQL, reducing API latencies across high-traffic pan-India healthcare portals.",
   },
   {
     id: "mba",
-    title: "Tech + MBA Strategic Synergy",
-    icon: "📊",
-    badge: "MBA in Finance & IT",
+    title: "Tech + MBA Synergy",
+    icon: "💎",
+    badge: "MBA Finance & IT",
     description: "Bridging deep code engineering with business finance, ROI analysis, operational cost reduction, and scalable IT governance for enterprise clients and stakeholders.",
   },
 ];
@@ -128,54 +127,54 @@ export const skills = [
   {
     category: "Backend Architecture",
     icon: "⚙️",
-    summary: "High-performance server architecture & APIs",
+    summary: "High-performance server engines & REST APIs",
     items: [
-      { name: "PHP 8.3 & Laravel 11", tag: "Primary Specialty", level: 98 },
-      { name: "RESTful APIs & Swagger", tag: "Enterprise Spec", level: 95 },
+      { name: "PHP 8.3 & Laravel 11", tag: "Primary Spec", level: 98 },
+      { name: "RESTful APIs & Swagger", tag: "Enterprise API", level: 95 },
       { name: "MySQL & Query Profiling", tag: "Relational DB", level: 94 },
       { name: "Redis Cache Clusters", tag: "+30% Velocity", level: 92 },
       { name: "PostgreSQL", tag: "Relational DB", level: 88 },
-      { name: "Python Automation", tag: "Saved 10+ hrs/wk", level: 86 },
+      { name: "Python Automation", tag: "10+ hrs/wk Saved", level: 86 },
       { name: "Node.js / Express", tag: "Microservices", level: 85 },
     ],
   },
   {
     category: "AI Agentic Engineering",
     icon: "🤖",
-    summary: "Next-gen autonomous AI workflows & velocity",
+    summary: "Next-gen autonomous AI workflows & 3.5x velocity",
     items: [
-      { name: "Google Antigravity IDE", tag: "Agentic Engineering", level: 96 },
-      { name: "GitHub Copilot", tag: "Pair-Programming", level: 96 },
-      { name: "Claude 3.7 & GPT-4", tag: "Architecture & Logic", level: 95 },
+      { name: "Google Antigravity IDE", tag: "Agentic Ops", level: 96 },
+      { name: "GitHub Copilot", tag: "Co-Pilot VI", level: 96 },
+      { name: "Claude 3.7 & GPT-4", tag: "Architecture AI", level: 95 },
       { name: "Prompt Architecture", tag: "System Design", level: 94 },
       { name: "Autonomous Refactoring", tag: "Zero-Regression", level: 92 },
-      { name: "Synthetic Test Generation", tag: "QA Acceleration", level: 93 },
+      { name: "Synthetic Test Generation", tag: "QA Boost", level: 93 },
     ],
   },
   {
     category: "Frontend & UI Systems",
     icon: "🎨",
-    summary: "Modern reactive, dynamic, state-driven interfaces",
+    summary: "3D interactive HUD interfaces & modern web apps",
     items: [
-      { name: "React.js & Next.js 16", tag: "Modern SPA / SSR", level: 94 },
-      { name: "Vue.js & Vuex", tag: "State Management", level: 92 },
-      { name: "TypeScript", tag: "Type Safety", level: 90 },
-      { name: "Tailwind CSS & CSS3", tag: "Design Systems", level: 94 },
+      { name: "React.js & Next.js 16", tag: "SPA / SSR", level: 94 },
+      { name: "Vue.js & Vuex", tag: "State Control", level: 92 },
+      { name: "TypeScript", tag: "Type Armor", level: 90 },
+      { name: "Tailwind CSS & CSS3", tag: "3D UI Systems", level: 94 },
       { name: "Blade Templates", tag: "Full-Stack UI", level: 95 },
-      { name: "Mobile Ergonomics & UX", tag: "Fluid Responsive", level: 93 },
+      { name: "Mobile Ergonomics & UX", tag: "Fluid Touch", level: 93 },
     ],
   },
   {
     category: "DevOps, Security & Scale",
     icon: "🛡️",
-    summary: "Standardized workflows & production tooling",
+    summary: "Production armor, deployments & telemetry",
     items: [
       { name: "Git & GitHub CI/CD", tag: "Version Control", level: 95 },
-      { name: "Postman & Swagger UI", tag: "API Verification", level: 93 },
+      { name: "Postman & Swagger UI", tag: "API Recon", level: 93 },
       { name: "Payment Gateways", tag: "Razorpay / Stripe", level: 92 },
-      { name: "Linux & cPanel Deploy", tag: "Infrastructure", level: 88 },
-      { name: "CSRF & SQLi Defense", tag: "Enterprise Security", level: 94 },
-      { name: "SMS / Webhook Services", tag: "Real-Time Telemetry", level: 90 },
+      { name: "Linux & cPanel Deploy", tag: "Server Ops", level: 88 },
+      { name: "CSRF & SQLi Defense", tag: "Max Armor", level: 94 },
+      { name: "SMS / Webhook Services", tag: "Live Telemetry", level: 90 },
     ],
   },
 ];
@@ -184,103 +183,110 @@ export const projects = [
   {
     id: 1,
     title: "Personal Portfolio & Showcase",
-    subtitle: "Next-Gen Developer Hub & Showcase",
+    subtitle: "GTA VI 3D Leonida Edition",
+    postcardZone: "VICE BEACH",
     description:
-      "Modern full-stack personal portfolio showcasing comprehensive project galleries, interactive UI, and live technical capabilities built with Next.js, React, and TypeScript.",
-    tags: ["Next.js", "React.js", "TypeScript", "Bento UI", "Tailwind/CSS3"],
+      "3D GTA VI (Vice City Sunset & Biscayne Bay) themed full-stack portfolio featuring multi-plane parallax skyline art, live 3D particle canvas, tilt-reactive cards, ViceNet terminal, and mini-map HUD built with Next.js 16 & TypeScript.",
+    tags: ["Next.js 16", "React 19", "TypeScript", "3D Parallax", "CSS3"],
     category: "fullstack",
-    impact: "Next-Gen Portfolio",
+    impact: "6-Star 3D GTA VI",
     github: "https://github.com/shubham-bramhane",
     live: "https://my-portfolio-shubham-bramhanes-projects.vercel.app",
-    color: "#00f5a0",
+    color: "#ff4fa3",
     period: "2024–Present",
   },
   {
     id: 2,
     title: "Oncquest Healthcare System",
     subtitle: "Pan-India Diagnostic Platform",
+    postcardZone: "VICE MED CENTER",
     description:
       "Comprehensive diagnostic management platform developed using Laravel, React.js, and Vue.js. Streamlined test booking, package catalogs, and diagnostic data management for pan-India healthcare services.",
     tags: ["Laravel", "React.js", "Vue.js", "MySQL", "REST APIs"],
     category: "healthcare",
-    impact: "30% Performance Boost",
+    impact: "+30% Speed Boost",
     github: "https://github.com/shubham-bramhane",
     live: "https://oncquestlabs.com",
     image: "/oncquestfrontend.png",
-    color: "#6366f1",
+    color: "#ff944d",
     period: "2023–Present",
   },
   {
     id: 3,
     title: "Oncquest Admin Project",
     subtitle: "Enterprise Diagnostic Control Center",
+    postcardZone: "LEONIDA HQ",
     description:
       "Centralized administrative control panel for Oncquest Healthcare to manage diagnostic centres, complex test hierarchies, pricing packages, patient records, and live order tracking.",
     tags: ["Laravel", "Vue.js", "MySQL", "Admin Panel", "Redis"],
     category: "healthcare",
-    impact: "Centralized Diagnostics",
+    impact: "Command Center",
     github: "https://github.com/shubham-bramhane",
     live: "https://admin.oncquestlabs.com/admin",
     image: "/oncquesadmin.png",
-    color: "#00d2ff",
+    color: "#22d3ee",
     period: "2023–2024",
   },
   {
     id: 4,
     title: "OncqFieldAssist",
     subtitle: "Real-Time Field Operations Platform",
+    postcardZone: "LEONIDA KEYS",
     description:
       "Custom on-ground field operations application built for Oncquest phlebotomists and field agents to handle real-time home sample collection, customer verification, and logistics updates.",
     tags: ["Laravel", "PHP", "MySQL", "Field Operations"],
     category: "healthcare",
-    impact: "Live Logistics Tracking",
+    impact: "Live GPS Ops",
     github: "https://github.com/shubham-bramhane",
     live: "https://oncqfieldassist.oncquestlabs.com",
     image: "/oncqfieldassist.png",
-    color: "#f59e0b",
+    color: "#ffd166",
     period: "2023–2024",
   },
   {
     id: 5,
     title: "TMS (Big Basket) Training System",
     subtitle: "Enterprise Training Management System",
+    postcardZone: "PORT GELLHORN",
     description:
       "Centralized training data management system engineered for Big Basket. Manages enterprise trainer allocations, participant tracking, certifications, and training evaluation analytics.",
     tags: ["Laravel", "PHP", "MySQL", "Bootstrap", "REST API"],
     category: "enterprise",
-    impact: "Enterprise Scale TMS",
+    impact: "Enterprise TMS",
     github: "https://github.com/shubham-bramhane",
     live: "https://bbtms.centumlearnpro.in",
     image: "/bbtms.png",
-    color: "#f43f5e",
+    color: "#ff4fa3",
     period: "2023–2024",
   },
   {
     id: 6,
     title: "Lal Path Labs Healthcare Platform",
     subtitle: "Diagnostics Platform & SEO Engine",
+    postcardZone: "AMBROSIA DISTRICT",
     description:
       "Maintenance, continuous feature development, and custom SEO engine for Lal Path Labs, a premier healthcare diagnostics chain, enhancing dynamic metadata and organic patient reach.",
     tags: ["Laravel", "PHP", "SEO Engine", "MySQL", "Healthcare"],
     category: "healthcare",
-    impact: "SEO & Growth Engine",
+    impact: "SEO Growth Engine",
     github: "https://github.com/shubham-bramhane",
     live: "https://www.lalpathlabs.com",
-    color: "#8b5cf6",
+    color: "#34d399",
     period: "2023–2024",
   },
   {
     id: 7,
     title: "Magical Umbrella Platform",
     subtitle: "Python Automation & Web Workflows",
+    postcardZone: "GRASSRIVERS LABS",
     description:
       "Automated routine data processing pipelines and maintained web features using Python scripts, saving 10+ manual hours weekly with optimized database queries and secure RESTful endpoints.",
     tags: ["Python", "Automation", "REST APIs", "MySQL"],
     category: "enterprise",
-    impact: "Saved 10+ hrs/week",
+    impact: "10+ hrs/wk Saved",
     github: "https://github.com/shubham-bramhane",
     live: "https://magicalumbrella.com/",
-    color: "#00d2ff",
+    color: "#22d3ee",
     period: "2021–2022",
   },
 ];
@@ -354,7 +360,7 @@ export const experience = [
     organization:
       "Shree Sai College of Engineering and Technology (SSCET), Bhadrawati",
     period: "2016 – 2020",
-    badge: "74.60%",
+    badge: "74.60% Distinction",
     description:
       "Graduated with 74.60% from Gondwana University. Comprehensive study of Software Architecture, Data Structures, Algorithms, Relational Databases, and Operating Systems. Final year project: Virtual Mouse Implementation using OpenCV.",
     highlights: [

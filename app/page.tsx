@@ -6,10 +6,11 @@ import Projects from "@/components/Projects";
 import Experience from "@/components/Experience";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
+import GtaHud from "@/components/GtaHud";
 
 export default function Home() {
   return (
-    <main>
+    <main className="gta-world-root">
       <Navbar />
       <Hero />
       <About />
@@ -18,6 +19,7 @@ export default function Home() {
       <Experience />
       <Contact />
       <Footer />
+      <GtaHud />
     </main>
   );
 }

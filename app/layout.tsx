@@ -1,22 +1,43 @@
 import type { Metadata } from "next";
-import { Inter, Outfit, JetBrains_Mono } from "next/font/google";
+import { Outfit, Inter, JetBrains_Mono, Yellowtail } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
-const outfit = Outfit({ subsets: ["latin"], variable: "--font-outfit" });
-const jetbrains = JetBrains_Mono({ subsets: ["latin"], variable: "--font-mono" });
+const outfit = Outfit({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800", "900"],
+  variable: "--font-outfit",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+});
+
+const jetbrains = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
+
+const yellowtail = Yellowtail({
+  weight: "400",
+  subsets: ["latin"],
+  variable: "--font-vice-script",
+});
 
 export const metadata: Metadata = {
-  title: "Shubham Bramhane | Laravel Developer & Full-Stack Engineer",
+  title: "Shubham Bramhane | Senior Full-Stack Architect — GTA VI 3D Edition",
   description:
-    "Portfolio of Shubham Bramhane — Full Stack Developer with over 5 years of experience specializing in the Laravel ecosystem, AI-assisted workflows (GitHub Copilot, GPT-4, Antigravity), healthcare systems, and scalable CRM solutions.",
+    "3D GTA VI (Vice City / Leonida Sunset) developer portfolio of Shubham Bramhane — Senior Full-Stack Architect with 5+ years in Laravel, React/Next.js, Python, Redis (+30% velocity), and AI-augmented workflows.",
   keywords:
-    "Shubham Bramhane, Laravel Developer, Full-Stack Engineer, PHP, React.js, Vue.js, Next.js, MySQL, PostgreSQL, Healthcare Systems, Chandrapur, Maharashtra, Portfolio",
+    "Shubham Bramhane, GTA 6 3D Portfolio, Vice City Sunset, Laravel Developer, Senior Full-Stack Architect, React.js, Next.js, Vue.js, Python, AI Systems, Healthcare Systems",
   authors: [{ name: "Shubham Bramhane" }],
+  icons: {
+    icon: "/favicon.svg",
+  },
   openGraph: {
-    title: "Shubham Bramhane | Laravel Developer & Full-Stack Engineer",
+    title: "Shubham Bramhane | Senior Full-Stack Architect — GTA VI 3D Edition",
     description:
-      "Full Stack Developer with over 5 years of experience specializing in the Laravel ecosystem, AI workflows, and healthcare systems.",
+      "Senior Full-Stack Architect with 5+ years specializing in Laravel, React & Next.js, Python, AI Systems, and pan-India healthcare platforms.",
     type: "website",
   },
 };
@@ -27,7 +48,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${inter.variable} ${outfit.variable} ${jetbrains.variable}`}>
+    <html
+      lang="en"
+      className={`${outfit.variable} ${inter.variable} ${jetbrains.variable} ${yellowtail.variable}`}
+    >
       <body>{children}</body>
     </html>
   );

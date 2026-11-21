@@ -1,19 +1,21 @@
 'use client';
 import { useState } from 'react';
 import { experience } from '@/data/profile';
+import Tilt3DCard from '@/components/Tilt3DCard';
 
 const trackTabs = [
-  { id: 'all', label: 'All Journey' },
+  { id: 'all', label: 'All Chapters' },
   { id: 'work', label: 'Work Experience (5+ Yrs)' },
-  { id: 'education', label: 'Academic Qualifications' },
+  { id: 'education', label: 'Academic Credentials' },
 ];
 
 export default function Experience() {
   const [activeTrack, setActiveTrack] = useState('all');
 
-  const filteredItems = activeTrack === 'all'
-    ? experience
-    : experience.filter((item) => item.type === activeTrack);
+  const filteredItems =
+    activeTrack === 'all'
+      ? experience
+      : experience.filter((item) => item.type === activeTrack);
 
   return (
     <section id="experience" className="section-neo experience-neo-section">
@@ -22,7 +24,7 @@ export default function Experience() {
         <div className="section-head-neo">
           <div className="section-eyebrow">
             <span className="eyebrow-dot" />
-            <span>Career &amp; Credentials</span>
+            <span>STORY MODE VI // CAREER CHAPTERS</span>
           </div>
           <h2 className="section-headline">
             Experience &amp; <span className="gradient-shimmer">Qualifications</span>
@@ -48,13 +50,12 @@ export default function Experience() {
           </div>
         </div>
 
-        {/* Neo Timeline Container */}
+        {/* Leonida GPS Route Timeline */}
         <div className="neo-timeline-stream">
           {filteredItems.map((item, index) => {
             const isWork = item.type === 'work';
             return (
               <div className="timeline-neo-row" key={item.id}>
-                {/* Node marker */}
                 <div className="timeline-node-column">
                   <div className={`timeline-node-pin ${isWork ? 'pin-work' : 'pin-edu'}`}>
                     <span className="pin-icon">{isWork ? '💼' : '🎓'}</span>
@@ -62,14 +63,17 @@ export default function Experience() {
                   {index < filteredItems.length - 1 && <div className="timeline-connector-line" />}
                 </div>
 
-                {/* Content Card */}
                 <div className="timeline-card-wrap">
-                  <div className={`timeline-neo-card ${isWork ? 'card-border-work' : 'card-border-edu'}`}>
+                  <Tilt3DCard
+                    maxTilt={3.5}
+                    glareColor={isWork ? 'rgba(255, 79, 163, 0.2)' : 'rgba(56, 242, 255, 0.2)'}
+                    className={`timeline-neo-card ${isWork ? 'card-border-work' : 'card-border-edu'}`}
+                  >
                     <div className="timeline-card-header">
                       <div className="timeline-heading-left">
                         <div className="type-badge-row">
                           <span className={`timeline-type-pill ${isWork ? 'pill-work' : 'pill-edu'}`}>
-                            {isWork ? 'Professional Experience' : 'Academic Qualification'}
+                            {isWork ? 'Career Chapter' : 'Academic Rank'}
                           </span>
                           {item.badge && <span className="timeline-status-pill">{item.badge}</span>}
                         </div>
@@ -93,12 +97,12 @@ export default function Experience() {
                     <div className="timeline-highlights-grid">
                       {item.highlights.map((h) => (
                         <div className="highlight-neo-pill" key={h}>
-                          <span className="pill-check">{isWork ? '⚡' : '✓'}</span>
+                          <span className="pill-check">{isWork ? '★' : '✓'}</span>
                           <span className="pill-text">{h}</span>
                         </div>
                       ))}
                     </div>
-                  </div>
+                  </Tilt3DCard>
                 </div>
               </div>
             );

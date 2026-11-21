@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Shubham Bramhane — GTA VI Leonida Portfolio Overview</title>
+  <style>
+    @page {
+      size: A4;
+      margin: 0;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+      background: #0b0713;
+      color: #f8fafc;
+      line-height: 1.5;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .page {
+      width: 210mm;
+      min-height: 297mm;
+      padding: 16mm 16mm 14mm;
+      background: linear-gradient(180deg, #210d35 0%, #130920 34%, #0b0713 100%);
+      position: relative;
+      page-break-after: always;
+      overflow: hidden;
+    }
+    .page:last-child { page-break-after: auto; }
+    .top-stripe {
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, #2ee6d6 0%, #ff5db1 45%, #ff944d 80%, #ffd166 100%);
+    }
+    .vi-ghost {
+      position: absolute;
+      top: 10mm;
+      right: 12mm;
+      font-family: Impact, 'Arial Black', sans-serif;
+      font-size: 96px;
+      color: rgba(255, 93, 177, 0.1);
+      letter-spacing: 6px;
+      line-height: 1;
+      pointer-events: none;
+    }
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      border-bottom: 1.5px solid rgba(255, 93, 177, 0.3);
+      padding-bottom: 14px;
+      margin-bottom: 18px;
+      position: relative;
+      z-index: 1;
+    }
+    .brand-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 8px;
+    }
+    .brand-box {
+      display: inline-block;
+      background: linear-gradient(135deg, #211038, #12081e);
+      color: #ffffff;
+      font-weight: 900;
+      font-size: 18px;
+      padding: 4px 10px;
+      border: 1.5px solid #ff5db1;
+      border-radius: 6px;
+      letter-spacing: 1px;
+    }
+    .brand-box em {
+      font-style: normal;
+      color: #ffd166;
+      margin-left: 3px;
+    }
+    .kicker {
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #2ee6d6;
+    }
+    h1 {
+      font-size: 27px;
+      font-weight: 900;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      line-height: 1.1;
+      margin-bottom: 4px;
+    }
+    .sunset { color: #ff944d; }
+    .subtitle {
+      font-size: 12.5px;
+      color: #d4cde6;
+      font-weight: 600;
+    }
+    .wanted {
+      text-align: right;
+      background: rgba(16, 10, 28, 0.9);
+      border: 1px solid rgba(255, 93, 177, 0.45);
+      border-radius: 8px;
+      padding: 8px 12px;
+    }
+    .wanted-stars {
+      color: #ffd166;
+      font-size: 15px;
+      letter-spacing: 2.5px;
+    }
+    .wanted-lbl {
+      font-size: 9.5px;
+      text-transform: uppercase;
+      letter-spacing: 1.4px;
+      color: #ff9dd0;
+      margin-top: 2px;
+      font-weight: 700;
+    }
+    .metrics-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+    .metric {
+      background: #150e24;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-top: 3px solid #ffd166;
+      border-radius: 8px;
+      padding: 10px 12px;
+    }
+    .metric.aqua { border-top-color: #2ee6d6; }
+    .metric.pink { border-top-color: #ff5db1; }
+    .metric.coral { border-top-color: #ff6e4a; }
+    .metric-val {
+      font-size: 20px;
+      font-weight: 900;
+      color: #ffffff;
+    }
+    .metric.aqua .metric-val { color: #2ee6d6; }
+    .metric.pink .metric-val { color: #ff5db1; }
+    .metric.coral .metric-val { color: #ff944d; }
+    .metric.gold .metric-val { color: #ffd166; }
+    .metric-lbl {
+      font-size: 11px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-top: 2px;
+    }
+    .metric-sub {
+      font-size: 10px;
+      color: #9e93b8;
+    }
+    h2 {
+      font-size: 13.5px;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 1.8px;
+      color: #ffd166;
+      border-left: 4px solid #ff5db1;
+      padding-left: 10px;
+      margin: 16px 0 10px;
+    }
+    p.body-txt {
+      font-size: 11.4px;
+      color: #d4cde6;
+      margin-bottom: 10px;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .card {
+      background: #150e24;
+      border: 1px solid rgba(255, 93, 177, 0.22);
+      border-radius: 8px;
+      padding: 12px 14px;
+    }
+    .card h3 {
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.9px;
+      color: #ffffff;
+      margin-bottom: 6px;
+    }
+    .card ul {
+      list-style: none;
+      font-size: 10.9px;
+      color: #d4cde6;
+    }
+    .card ul li {
+      padding: 2.5px 0;
+    }
+    .card ul li span {
+      color: #2ee6d6;
+      font-weight: 800;
+      margin-right: 5px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 10.6px;
+      margin-top: 4px;
+    }
+    th, td {
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 6.5px 9px;
+      text-align: left;
+    }
+    th {
+      background: #1f1336;
+      color: #ffd166;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-size: 9.8px;
+    }
+    td { background: #120b20; color: #ede9f7; }
+    .tag {
+      display: inline-block;
+      padding: 2px 7px;
+      border-radius: 999px;
+      background: rgba(255, 93, 177, 0.18);
+      border: 1px solid rgba(255, 93, 177, 0.45);
+      color: #ff9dd0;
+      font-size: 9.3px;
+      font-weight: 700;
+      text-transform: uppercase;
+    }
+    .footer-bar {
+      position: absolute;
+      bottom: 10mm;
+      left: 16mm;
+      right: 16mm;
+      display: flex;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 93, 177, 0.24);
+      padding-top: 8px;
+      font-size: 10px;
+      color: #9e93b8;
+    }
+  </style>
+</head>
+<body>
+  <!-- Page 1 -->
+  <section class="page">
+    <div class="top-stripe"></div>
+    <div class="vi-ghost">VI</div>
+    <div class="header">
+      <div>
+        <div class="brand-row">
+          <span class="brand-box">SB<em>VI</em></span>
+          <span class="kicker">WELCOME TO LEONIDA // GRAND THEFT CODE VI</span>
+        </div>
+        <h1>SHUBHAM BRAMHANE <span class="sunset">PORTFOLIO</span></h1>
+        <div class="subtitle">Senior Full-Stack Architect &amp; AI-Augmented Engineer • GTA VI Leonida Edition Overview</div>
+      </div>
+      <div class="wanted">
+        <div class="wanted-stars">★★★★★★</div>
+        <div class="wanted-lbl">6-STAR FULL-STACK ARCHITECT</div>
+      </div>
+    </div>
+
+    <div class="metrics-grid">
+      <div class="metric aqua">
+        <div class="metric-val">5+ YRS</div>
+        <div class="metric-lbl">Laravel Ecosystem</div>
+        <div class="metric-sub">Enterprise &amp; Microservices</div>
+      </div>
+      <div class="metric pink">
+        <div class="metric-val">+30%</div>
+        <div class="metric-lbl">Query Velocity</div>
+        <div class="metric-sub">Redis &amp; DB Profiling</div>
+      </div>
+      <div class="metric gold">
+        <div class="metric-val">3.5x</div>
+        <div class="metric-lbl">AI Sprint Velocity</div>
+        <div class="metric-sub">Antigravity &amp; Copilot</div>
+      </div>
+      <div class="metric coral">
+        <div class="metric-val">10+ HRS</div>
+        <div class="metric-lbl">Weekly Automated</div>
+        <div class="metric-sub">Python Data Pipelines</div>
+      </div>
+    </div>
+
+    <h2>Product Value Proposition</h2>
+    <p class="body-txt">
+      A next-gen <strong>Grand Theft Auto VI (Vice City / Leonida)</strong> themed developer portfolio engineered with <strong>Next.js 16 (App Router)</strong>, <strong>React 19</strong>, and <strong>TypeScript 5</strong>. Built around the authentic GTA VI pastel-sunset key-art aesthetic to stand out immediately to technical recruiters, engineering leaders, and enterprise clients while keeping production metrics, case studies, and 1-click resume access effortless to scan.
+    </p>
+
+    <h2>Signature GTA VI Theme Features</h2>
+    <div class="two-col">
+      <div class="card">
+        <h3>Leonida Interactive HUD</h3>
+        <ul>
+          <li><span>★</span> Frosted violet-dusk navbar with <strong>SB VI</strong> badge &amp; 6-Star Wanted Meter</li>
+          <li><span>★</span> Collapsible Biscayne Bay Mini-Map radar (<code>VI-01</code>–<code>VI-06</code>) with clickable pins</li>
+          <li><span>★</span> Global &ldquo;MISSION PASSED // VI&rdquo; &amp; &ldquo;DOSSIER VI ACQUIRED&rdquo; toasts</li>
+          <li><span>★</span> Discrete GTA VI 6-segment proficiency gauges for all metrics &amp; skills</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Vice City Sunset Visual Craft</h3>
+        <ul>
+          <li><span>★</span> Giant translucent <strong>VI</strong> sunset numeral watermark &amp; palm skyline horizon</li>
+          <li><span>★</span> <code>LEONIDA.NET // VICE TERMINAL VI</code> 3-tab interactive architecture viewer</li>
+          <li><span>★</span> Leonida Postcard project cards (Vice Beach, Leonida Keys, Port Gellhorn)</li>
+          <li><span>★</span> Story-mode VI GPS timeline &amp; Vice Comms SMTP dispatch form</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Featured Leonida Missions (Case Studies)</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Project / Mission</th>
+          <th>Postcard Zone</th>
+          <th>Core Stack</th>
+          <th>Verified Impact</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Oncquest Healthcare System</strong></td>
+          <td>Vice Med Center</td>
+          <td>Laravel, React.js, Vue.js, MySQL, REST</td>
+          <td><span class="tag">+30% Speed Boost</span></td>
+        </tr>
+        <tr>
+          <td><strong>Oncquest Admin Control Center</strong></td>
+          <td>Leonida HQ</td>
+          <td>Laravel, Vue.js, MySQL, Redis</td>
+          <td><span class="tag">Command Center</span></td>
+        </tr>
+        <tr>
+          <td><strong>OncqFieldAssist</strong></td>
+          <td>Leonida Keys</td>
+          <td>Laravel, PHP, MySQL</td>
+          <td><span class="tag">Live GPS Ops</span></td>
+        </tr>
+        <tr>
+          <td><strong>Big Basket TMS</strong></td>
+          <td>Port Gellhorn</td>
+          <td>Laravel, PHP, MySQL, REST API</td>
+          <td><span class="tag">Enterprise TMS</span></td>
+        </tr>
+        <tr>
+          <td><strong>Lal Path Labs Platform</strong></td>
+          <td>Ambrosia District</td>
+          <td>Laravel, PHP, SEO Engine, MySQL</td>
+          <td><span class="tag">SEO Growth Engine</span></td>
+        </tr>
+        <tr>
+          <td><strong>Magical Umbrella Automation</strong></td>
+          <td>Grassrivers Labs</td>
+          <td>Python, REST APIs, MySQL</td>
+          <td><span class="tag">10+ hrs/wk Saved</span></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="footer-bar">
+      <span>Shubham Bramhane • shubham.bramhane75@gmail.com • +91 8857916707</span>
+      <span>Page 1 of 2</span>
+    </div>
+  </section>
+
+  <!-- Page 2 -->
+  <section class="page">
+    <div class="top-stripe"></div>
+    <div class="vi-ghost">VI</div>
+    <div class="header">
+      <div>
+        <div class="kicker">SYSTEM ARCHITECTURE // ENGINEERING &amp; DEPLOYMENT</div>
+        <h1>TECHNICAL <span class="sunset">BLUEPRINT</span></h1>
+        <div class="subtitle">Next.js 16 App Router • TypeScript 5 • GTA VI Leonida CSS System • Nodemailer SMTP</div>
+      </div>
+      <div class="wanted">
+        <div class="wanted-stars">VI-02</div>
+        <div class="wanted-lbl">VERCEL PRODUCTION READY</div>
+      </div>
+    </div>
+
+    <h2>Application Architecture &amp; Module Map</h2>
+    <div class="two-col">
+      <div class="card">
+        <h3>Frontend Components</h3>
+        <ul>
+          <li><span>▸</span> <strong>app/layout.tsx</strong> — Self-hosted Google Fonts (Outfit, Inter, JetBrains Mono, Yellowtail)</li>
+          <li><span>▸</span> <strong>components/Vice3DCanvas.tsx &amp; Tilt3DCard.tsx</strong> — 60fps 3D perspective canvas &amp; interactive 3D tilt cards</li>
+          <li><span>▸</span> <strong>components/Navbar.tsx</strong> — Leonida 3D HUD dock, 6-Star Wanted Meter &amp; mobile drawer</li>
+          <li><span>▸</span> <strong>components/Hero.tsx</strong> — 3D parallax Vice City sunset skyline (<code>/gta6-vice-hero.jpg</code>), 4 glowing CTA cards &amp; 3D Vice Terminal</li>
+          <li><span>▸</span> <strong>components/GtaHud.tsx</strong> — Global toast event listener &amp; Biscayne Bay radar</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Data &amp; Backend Layer</h3>
+        <ul>
+          <li><span>▸</span> <strong>data/profile.ts</strong> — Typed source of truth for metrics, skills, 7 missions &amp; 7 career/academic chapters</li>
+          <li><span>▸</span> <strong>app/api/contact/route.ts</strong> — Server-side POST Route Handler validating inputs &amp; sending GTA VI HTML email via Nodemailer</li>
+          <li><span>▸</span> <strong>app/globals.css</strong> — Zero-dependency responsive GTA VI Leonida CSS system</li>
+          <li><span>▸</span> <strong>public/</strong> — Project screenshots, avatar, VI/SB favicon &amp; downloadable PDF resume</li>
+        </ul>
+      </div>
+    </div>
+
+    <h2>Local Setup &amp; Production Deployment</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Stage</th>
+          <th>Command / Configuration</th>
+          <th>Purpose</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Install</strong></td>
+          <td><code>npm install</code> (<code>npm.cmd install</code> on Windows)</td>
+          <td>Install Next.js 16, React 19, TypeScript 5, Nodemailer 8</td>
+        </tr>
+        <tr>
+          <td><strong>Dev Server</strong></td>
+          <td><code>npm run dev</code></td>
+          <td>Run local live server at <code>http://localhost:3000</code></td>
+        </tr>
+        <tr>
+          <td><strong>Type &amp; Build</strong></td>
+          <td><code>npx tsc --noEmit &amp;&amp; npm run build</code></td>
+          <td>Verify strict TypeScript types &amp; compile production bundle</td>
+        </tr>
+        <tr>
+          <td><strong>SMTP Secrets</strong></td>
+          <td><code>MAIL_HOST, MAIL_PORT, MAIL_USERNAME, MAIL_PASSWORD, MAIL_FROM_ADDRESS</code></td>
+          <td>Server-only env vars configured in Vercel / <code>.env.local</code></td>
+        </tr>
+        <tr>
+          <td><strong>Hosting</strong></td>
+          <td>Vercel Continuous Deployment (<code>main</code> branch)</td>
+          <td>Live URL: <code>my-portfolio-shubham-bramhanes-projects.vercel.app</code></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Engineering Documentation Suite</h2>
+    <div class="card">
+      <h3>Repository Docs Tracked Under <code>docs/</code></h3>
+      <ul>
+        <li><span>✓</span> <strong>docs/prd.md</strong> — Problem statement, personas, functional requirements &amp; success metrics</li>
+        <li><span>✓</span> <strong>docs/trd.md</strong> — Architecture diagram, tech stack, data schema, API contract &amp; security posture</li>
+        <li><span>✓</span> <strong>docs/implementation-plan.md</strong> — Completed GTA VI phases, dependency map &amp; roadmap</li>
+        <li><span>✓</span> <strong>docs/testing-strategy.md</strong> — Build/type checks, critical QA scenarios &amp; planned Vitest/Playwright CI</li>
+        <li><span>✓</span> <strong>docs/deployment-plan.md</strong> — Env vars, Vercel release workflow, smoke tests &amp; instant rollback steps</li>
+      </ul>
+    </div>
+
+    <div class="footer-bar">
+      <span>Live: my-portfolio-shubham-bramhanes-projects.vercel.app • GitHub: github.com/shubham-bramhane</span>
+      <span>Page 2 of 2</span>
+    </div>
+  </section>
+</body>
+</html>

@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useState } from 'react';
 import { profile } from '@/data/profile';
+import { triggerGtaToast } from '@/components/GtaHud';
 
 export default function Footer() {
   const [showTop, setShowTop] = useState(false);
@@ -18,22 +19,23 @@ export default function Footer() {
           <div className="footer-neo-inner">
             <div className="footer-brand-side">
               <a href="#hero" className="footer-neo-logo">
-                <span className="brand-symbol">&lt;</span>
-                <span className="brand-name">SB</span>
-                <span className="brand-symbol">/&gt;</span>
-                <span className="brand-dot" />
+                <span className="gta-brand-box">
+                  <span className="brand-name">SB</span>
+                  <span className="brand-vi">VI</span>
+                </span>
+                <span className="footer-vice-script">Welcome to Leonida</span>
               </a>
               <p className="footer-tagline">
-                Laravel Developer &amp; Full-Stack Engineer • Over 5 years architecting enterprise healthcare &amp; CRM applications.
+                Laravel Developer &amp; Senior Full-Stack Architect • Over 5 years architecting enterprise healthcare &amp; CRM missions.
               </p>
             </div>
 
             <div className="footer-status-side">
               <div className="system-status-indicator">
                 <span className="beacon-core" />
-                <span>Open for High-Impact Roles</span>
+                <span>ONLINE • OPEN FOR HIGH-IMPACT ROLES</span>
               </div>
-              <p className="footer-location-txt">Chandrapur, Maharashtra - 442401</p>
+              <p className="footer-location-txt">SECTOR: Chandrapur, Maharashtra - 442401</p>
             </div>
           </div>
 
@@ -41,17 +43,24 @@ export default function Footer() {
 
           <div className="footer-bottom-row">
             <p className="footer-copyright-txt">
-              &copy; {new Date().getFullYear()} {profile.name}. Designed &amp; engineered for maximum performance.
+              &copy; {new Date().getFullYear()} {profile.name} • GRAND THEFT CODE VI (LEONIDA EDITION). Engineered for maximum velocity.
             </p>
             <div className="footer-links-quick">
-              <a href={profile.resumeUrl} download="Shubham_Bramhane_Resume.pdf" className="footer-quick-link">
-                Resume PDF ↗
+              <a
+                href={profile.resumeUrl}
+                download="Shubham_Bramhane_Resume.pdf"
+                className="footer-quick-link"
+                onClick={() =>
+                  triggerGtaToast('DOSSIER VI ACQUIRED', 'VICE REP + • RESUME PDF OPENED', 'sunset')
+                }
+              >
+                DOSSIER PDF ↗
               </a>
               <a href={profile.social.github} target="_blank" rel="noopener noreferrer" className="footer-quick-link">
-                GitHub ↗
+                GITHUB ↗
               </a>
               <a href={profile.social.linkedin} target="_blank" rel="noopener noreferrer" className="footer-quick-link">
-                LinkedIn ↗
+                LINKEDIN ↗
               </a>
             </div>
           </div>
@@ -62,6 +71,7 @@ export default function Footer() {
         className={`neo-back-to-top${showTop ? ' visible' : ''}`}
         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
         aria-label="Back to top"
+        title="Fast Travel to Vice Beach"
       >
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
           <path d="M18 15l-6-6-6 6" />

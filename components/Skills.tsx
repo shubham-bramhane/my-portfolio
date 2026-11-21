@@ -1,6 +1,7 @@
 'use client';
 import { useEffect, useRef } from 'react';
 import { skills } from '@/data/profile';
+import Tilt3DCard from '@/components/Tilt3DCard';
 
 export default function Skills() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -33,10 +34,10 @@ export default function Skills() {
         <div className="section-head-neo">
           <div className="section-eyebrow">
             <span className="eyebrow-dot" />
-            <span>Technical Capabilities</span>
+            <span>PLAYER SPECS // VICE LOADOUT VI</span>
           </div>
           <h2 className="section-headline">
-            Skills &amp; <span className="gradient-shimmer">Tech Stack</span>
+            Skills &amp; <span className="gradient-shimmer">Tech Arsenal</span>
           </h2>
           <p className="section-subheadline">
             Battle-tested technologies and AI accelerators powering robust, production-grade applications.
@@ -47,9 +48,11 @@ export default function Skills() {
           {skills.map((category, idx) => {
             const isAi = category.category.toLowerCase().includes('ai');
             return (
-              <div
-                className={`skill-bento-card reveal-on-scroll${isAi ? ' card-ai-glow' : ''}`}
+              <Tilt3DCard
                 key={category.category}
+                maxTilt={5}
+                glareColor={isAi ? 'rgba(255, 79, 163, 0.24)' : 'rgba(56, 242, 255, 0.2)'}
+                className={`skill-bento-card reveal-on-scroll${isAi ? ' card-ai-glow' : ''}`}
                 style={{ animationDelay: `${idx * 0.1}s` }}
               >
                 <div className="skill-card-head">
@@ -58,9 +61,10 @@ export default function Skills() {
                     <h3 className="category-title-neo">{category.category}</h3>
                     <p className="category-sub">{category.summary}</p>
                   </div>
-                  {isAi && <span className="ai-highlight-pill">⚡ Supercharged</span>}
+                  {isAi && <span className="ai-highlight-pill">★ Overdrive VI</span>}
                 </div>
 
+                {/* GTA VI 6-Segment Proficiency Bars */}
                 <div className="skill-chips-cloud">
                   {category.items.map((skill) => (
                     <div className="skill-chip-item" key={skill.name}>
@@ -68,9 +72,12 @@ export default function Skills() {
                         <span className="chip-name">{skill.name}</span>
                         {skill.tag && <span className="chip-tag-pill">{skill.tag}</span>}
                       </div>
-                      <div className="chip-level-bar">
+                      <div
+                        className="chip-level-bar gta-segmented-bar"
+                        aria-label={`${skill.name} proficiency ${skill.level}%`}
+                      >
                         <div
-                          className="chip-level-fill"
+                          className={`chip-level-fill${isAi ? ' fill-gold' : ''}`}
                           style={{ width: `${skill.level}%` }}
                         />
                       </div>
@@ -79,10 +86,10 @@ export default function Skills() {
                 </div>
 
                 <div className="skill-card-footer">
-                  <span className="footer-count">{category.items.length} Technologies</span>
-                  <span className="footer-status-pill">Production Ready</span>
+                  <span className="footer-count">{category.items.length} Equipped Technologies</span>
+                  <span className="footer-status-pill">● Production Ready</span>
                 </div>
-              </div>
+              </Tilt3DCard>
             );
           })}
         </div>

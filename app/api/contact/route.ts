@@ -24,35 +24,36 @@ export async function POST(req: NextRequest) {
     });
 
     await transporter.sendMail({
-      from: `"Portfolio Contact" <${process.env.MAIL_FROM_ADDRESS}>`,
+      from: `"Leonida.net Dispatch VI" <${process.env.MAIL_FROM_ADDRESS}>`,
       to: process.env.MAIL_FROM_ADDRESS,
       replyTo: email,
-      subject: subject || `Portfolio Contact from ${name}`,
+      subject: subject || `[GTA VI Portfolio Dispatch] New Briefing from ${name}`,
       html: `
-        <div style="font-family: 'Segoe UI', sans-serif; max-width: 600px; margin: 0 auto; background: #0a0a0f; color: #f0f0f5; border-radius: 16px; overflow: hidden;">
-          <div style="background: linear-gradient(135deg, #6c63ff, #ff6b9d, #00d2ff); padding: 32px; text-align: center;">
-            <h1 style="margin: 0; font-size: 24px; color: white;">New Portfolio Message</h1>
+        <div style="font-family: 'Segoe UI', sans-serif; max-width: 600px; margin: 0 auto; background: #0d0816; color: #f8fafc; border: 2px solid #ff5db1; border-radius: 10px; overflow: hidden;">
+          <div style="background: linear-gradient(135deg, #ff5db1 0%, #ff944d 55%, #ffd166 100%); padding: 28px 32px; text-align: center;">
+            <p style="margin: 0 0 6px; font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #0d0816; font-weight: 800;">LEONIDA.NET // VICE COMMS VI</p>
+            <h1 style="margin: 0; font-size: 26px; letter-spacing: 1.5px; text-transform: uppercase; color: #0d0816; font-weight: 900;">NEW MISSION BRIEFING</h1>
           </div>
-          <div style="padding: 32px;">
-            <div style="margin-bottom: 20px;">
-              <p style="color: #6b6b80; font-size: 12px; text-transform: uppercase; margin: 0 0 4px;">From</p>
-              <p style="margin: 0; font-size: 16px; font-weight: 600;">${name}</p>
+          <div style="padding: 30px 32px;">
+            <div style="margin-bottom: 18px; border-left: 3px solid #ffd166; padding-left: 12px;">
+              <p style="color: #ffd166; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 0 4px; font-weight: 700;">CONTACT</p>
+              <p style="margin: 0; font-size: 16px; font-weight: 700; color: #ffffff;">${name}</p>
             </div>
-            <div style="margin-bottom: 20px;">
-              <p style="color: #6b6b80; font-size: 12px; text-transform: uppercase; margin: 0 0 4px;">Email</p>
-              <p style="margin: 0;"><a href="mailto:${email}" style="color: #6c63ff;">${email}</a></p>
+            <div style="margin-bottom: 18px; border-left: 3px solid #2ee6d6; padding-left: 12px;">
+              <p style="color: #2ee6d6; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 0 4px; font-weight: 700;">REPLY CHANNEL</p>
+              <p style="margin: 0;"><a href="mailto:${email}" style="color: #ff5db1; font-weight: 600;">${email}</a></p>
             </div>
-            <div style="margin-bottom: 20px;">
-              <p style="color: #6b6b80; font-size: 12px; text-transform: uppercase; margin: 0 0 4px;">Subject</p>
-              <p style="margin: 0;">${subject || "No subject"}</p>
+            <div style="margin-bottom: 18px; border-left: 3px solid #ff5db1; padding-left: 12px;">
+              <p style="color: #ff5db1; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 0 4px; font-weight: 700;">MISSION TOPIC</p>
+              <p style="margin: 0; color: #ffffff;">${subject || "General Inquiry"}</p>
             </div>
-            <div style="background: rgba(255,255,255,0.05); border-radius: 12px; padding: 20px; border: 1px solid rgba(255,255,255,0.06);">
-              <p style="color: #6b6b80; font-size: 12px; text-transform: uppercase; margin: 0 0 8px;">Message</p>
-              <p style="margin: 0; line-height: 1.7; white-space: pre-wrap;">${message}</p>
+            <div style="background: #171024; padding: 20px; border-radius: 6px; border: 1px solid rgba(255,255,255,0.12); border-top: 2px solid #ff944d;">
+              <p style="color: #94a3b8; font-size: 11px; text-transform: uppercase; letter-spacing: 1.5px; margin: 0 0 8px; font-weight: 700;">BRIEFING DETAILS</p>
+              <p style="margin: 0; line-height: 1.7; white-space: pre-wrap; color: #e2e8f0;">${message}</p>
             </div>
           </div>
-          <div style="padding: 20px 32px; text-align: center; border-top: 1px solid rgba(255,255,255,0.06);">
-            <p style="color: #6b6b80; font-size: 12px; margin: 0;">Sent from shubhambramhane.in portfolio</p>
+          <div style="padding: 18px 32px; text-align: center; border-top: 1px solid rgba(255,255,255,0.08); background: #0a0612;">
+            <p style="color: #94a3b8; font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; margin: 0;">TRANSMITTED FROM SHUBHAM BRAMHANE // GRAND THEFT CODE VI (LEONIDA)</p>
           </div>
         </div>
       `,

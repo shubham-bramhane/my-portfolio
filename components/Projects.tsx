@@ -2,10 +2,11 @@
 import { useState } from 'react';
 import Image from 'next/image';
 import { projects } from '@/data/profile';
+import Tilt3DCard from '@/components/Tilt3DCard';
 
 const filterList = [
-  { id: 'all', label: 'All Projects' },
-  { id: 'healthcare', label: 'Healthcare Systems' },
+  { id: 'all', label: 'All Missions' },
+  { id: 'healthcare', label: 'Healthcare Ops' },
   { id: 'enterprise', label: 'Enterprise & CRM' },
   { id: 'fullstack', label: 'Full-Stack Apps' },
 ];
@@ -22,7 +23,7 @@ export default function Projects() {
       setActiveFilter(filterId);
       setFiltered(filterId === 'all' ? projects : projects.filter((p) => p.category === filterId));
       setIsTransitioning(false);
-    }, 200);
+    }, 180);
   };
 
   return (
@@ -32,17 +33,17 @@ export default function Projects() {
         <div className="section-head-neo">
           <div className="section-eyebrow">
             <span className="eyebrow-dot" />
-            <span>Featured Case Studies</span>
+            <span>LEONIDA POSTCARDS // FEATURED CASE STUDIES</span>
           </div>
           <h2 className="section-headline">
-            Featured <span className="gradient-shimmer">Projects</span>
+            Featured <span className="gradient-shimmer">Missions</span>
           </h2>
           <p className="section-subheadline">
             Selected enterprise applications, healthcare systems, and high-concurrency portals delivered with Laravel &amp; React.
           </p>
         </div>
 
-        {/* Filter Navigation */}
+        {/* Filter Strip */}
         <div className="neo-filter-bar">
           <div className="filter-pills-wrap">
             {filterList.map((f) => (
@@ -58,16 +59,21 @@ export default function Projects() {
           </div>
         </div>
 
-        {/* Projects Grid */}
+        {/* 3D Tilt GTA VI Leonida Postcard Projects Grid */}
         <div
           className="projects-neo-grid"
           style={{
             opacity: isTransitioning ? 0 : 1,
-            transform: isTransitioning ? 'translateY(16px)' : 'translateY(0)',
+            transform: isTransitioning ? 'translateY(14px)' : 'translateY(0)',
           }}
         >
-          {filtered.map((project) => (
-            <div className="project-neo-card" key={project.id}>
+          {filtered.map((project, index) => (
+            <Tilt3DCard
+              key={project.id}
+              maxTilt={7}
+              glareColor="rgba(255, 148, 77, 0.24)"
+              className="project-neo-card"
+            >
               {/* Card Media Preview */}
               <div className="project-media-wrap">
                 {project.image ? (
@@ -81,36 +87,46 @@ export default function Projects() {
                     />
                   </div>
                 ) : (
-                  <div className="project-canvas-fallback" style={{ background: `linear-gradient(135deg, ${project.color}15, rgba(10, 11, 20, 0.95))` }}>
+                  <div
+                    className="project-canvas-fallback"
+                    style={{
+                      background: `linear-gradient(135deg, ${project.color}38 0%, rgba(255, 148, 77, 0.16) 52%, rgba(9, 13, 31, 0.96) 100%)`,
+                    }}
+                  >
                     <div className="fallback-inner">
-                      <span className="fallback-ico">💻</span>
+                      <span className="fallback-zone-script">{project.postcardZone || 'Vice City'}</span>
+                      <span className="fallback-mission-num">Mission 0{index + 1}</span>
                       <span className="fallback-code-tag">{project.tags[0]}</span>
                     </div>
                   </div>
                 )}
 
-                {/* Floating Metric Badge */}
+                <div className="project-sunset-vignette" aria-hidden="true" />
+
                 {project.impact && (
                   <div className="project-floating-badge">
-                    <span className="badge-spark">✦</span>
+                    <span className="badge-spark">★</span>
                     <span>{project.impact}</span>
                   </div>
                 )}
 
                 <div className="project-period-tag">{project.period}</div>
+
+                {project.postcardZone && (
+                  <div className="project-postcard-stamp">{project.postcardZone}</div>
+                )}
               </div>
 
               {/* Card Body */}
               <div className="project-card-body">
                 <div className="card-top-meta">
                   <span className="project-category-pill">{project.category}</span>
-                  {project.subtitle && <span className="project-subtitle-text">{project.subtitle}</span>}
+                  {project.subtitle && <span className="project-subtitle-text">• {project.subtitle}</span>}
                 </div>
 
                 <h3 className="project-neo-title">{project.title}</h3>
                 <p className="project-neo-desc">{project.description}</p>
 
-                {/* Tags */}
                 <div className="project-tags-cloud">
                   {project.tags.map((tag) => (
                     <span className="neo-tag" key={tag}>
@@ -119,7 +135,6 @@ export default function Projects() {
                   ))}
                 </div>
 
-                {/* Card Actions */}
                 <div className="project-actions-row">
                   <a
                     href={project.github}
@@ -128,7 +143,7 @@ export default function Projects() {
                     className="project-action-link github-action"
                     aria-label={`View ${project.title} on GitHub`}
                   >
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
                       <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
                     </svg>
                     <span>Code</span>
@@ -143,7 +158,7 @@ export default function Projects() {
                       aria-label={`Visit live demo for ${project.title}`}
                     >
                       <span>Live Site</span>
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                         <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                         <polyline points="15 3 21 3 21 9" />
                         <line x1="10" y1="14" x2="21" y2="3" />
@@ -152,7 +167,7 @@ export default function Projects() {
                   )}
                 </div>
               </div>
-            </div>
+            </Tilt3DCard>
           ))}
         </div>
       </div>
