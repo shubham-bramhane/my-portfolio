@@ -2801,13 +2801,18 @@ button {
   }
 
   .mobile-banner-stack {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2px 5px;
     font-family: var(--font-heading);
-    font-size: 0.84rem;
+    font-size: 0.82rem;
     font-weight: 500;
     color: #e2e8f0;
-    line-height: 1.5;
+    line-height: 1.45;
     margin-bottom: 12px;
   }
+  .mobile-banner-stack .dot-sep { margin: 0; }
 
   .mobile-banner-proof {
     display: flex;
