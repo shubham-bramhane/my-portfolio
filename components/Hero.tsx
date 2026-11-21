@@ -39,7 +39,7 @@ export default function Hero() {
             fill
             priority
             sizes="100vw"
-            style={{ objectFit: 'cover', objectPosition: 'center right' }}
+            className="hero-vice-bg-img"
           />
         </div>
 
@@ -76,8 +76,8 @@ export default function Hero() {
                   <Image
                     src="/shubham.jpeg"
                     alt="Shubham"
-                    width={26}
-                    height={26}
+                    width={24}
+                    height={24}
                     style={{ borderRadius: '50%', objectFit: 'cover' }}
                     priority
                   />
@@ -86,28 +86,75 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Clean Wide-Tracked Cyan Role Eyebrow (Exact GitHub Banner Style) */}
-            <div className="hero-kicker-cyan">
-              SENIOR FULL-STACK ARCHITECT
+            {/* Mobile-only Framed Widescreen GTA VI Vice City Sunset Banner Preview (Exact GitHub Banner Feel!) */}
+            <div className="mobile-vice-banner-card">
+              <div className="mobile-vice-banner-art">
+                <Image
+                  src="/gta6-vice-hero.jpg"
+                  alt="GTA VI Vice City Sunset Skyline"
+                  fill
+                  sizes="(max-width: 768px) 94vw, 1px"
+                  style={{ objectFit: 'cover', objectPosition: 'center right' }}
+                />
+                <div className="mobile-vice-banner-scrim" />
+              </div>
+              <div className="mobile-vice-banner-content">
+                <div className="hero-kicker-cyan">
+                  <span>SENIOR FULL-STACK ARCHITECT</span>
+                  <span className="hero-kicker-script">Leonida</span>
+                </div>
+                <h2 className="mobile-banner-name">
+                  Shubham <span className="gradient-shimmer">Bramhane</span>
+                </h2>
+                <p className="mobile-banner-stack">
+                  <span className="nowrap-token">Laravel</span>
+                  <span className="dot-sep">·</span>
+                  <span className="nowrap-token">React &amp; Next.js</span>
+                  <span className="dot-sep">·</span>
+                  <span className="nowrap-token">Python</span>
+                  <span className="dot-sep">·</span>
+                  <span className="nowrap-token">Redis &amp; AWS</span>
+                  <span className="dot-sep">·</span>
+                  <span className="nowrap-token">AI Systems</span>
+                </p>
+                <div className="mobile-banner-proof">
+                  <span className="m-proof-chip">5+ Yrs Exp</span>
+                  <span className="m-proof-chip cyan">+30% Velocity</span>
+                  <span className="m-proof-chip gold">3.5x AI Boost</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Desktop Wide-Tracked Cyan Role Eyebrow */}
+            <div className="hero-kicker-cyan desktop-hero-identity">
+              <span>SENIOR FULL-STACK ARCHITECT</span>
               <span className="hero-kicker-script">Leonida</span>
             </div>
 
-            {/* Crisp Modern Geometric Name */}
-            <h1 className="hero-main-title">
+            {/* Desktop Crisp Modern Geometric Name */}
+            <h1 className="hero-main-title desktop-hero-identity">
               Shubham <span className="gradient-shimmer">Bramhane</span>
             </h1>
 
-            <p className="hero-stack-line">
-              Laravel <span className="dot-sep">·</span> React &amp; Next.js <span className="dot-sep">·</span> Python <span className="dot-sep">·</span> Redis &amp; AWS <span className="dot-sep">·</span> AI Systems
+            <p className="hero-stack-line desktop-hero-identity">
+              <span className="nowrap-token">Laravel</span>
+              <span className="dot-sep">·</span>
+              <span className="nowrap-token">React &amp; Next.js</span>
+              <span className="dot-sep">·</span>
+              <span className="nowrap-token">Python</span>
+              <span className="dot-sep">·</span>
+              <span className="nowrap-token">Redis &amp; AWS</span>
+              <span className="dot-sep">·</span>
+              <span className="nowrap-token">AI Systems</span>
             </p>
 
-            {/* Clean Pipe-Separated Proof Bar (Exact GitHub Banner Style) */}
-            <div className="hero-proof-bar">
-              <span>5+ Years Experience</span>
+            {/* Desktop Clean Pipe-Separated Proof Bar */}
+            <div className="hero-proof-bar desktop-hero-identity">
+              <span className="proof-chip-item">5+ Years Experience</span>
               <span className="proof-pipe">|</span>
-              <span className="proof-cyan">+30% Query Velocity</span>
+              <span className="proof-chip-item proof-cyan">+30% Query Velocity</span>
               <span className="proof-pipe">|</span>
-              <span className="proof-gold">3.5x AI Velocity</span>
+              <span className="proof-chip-item proof-gold">3.5x AI Velocity</span>
             </div>
 
             <p className="hero-subtext">{profile.bio}</p>

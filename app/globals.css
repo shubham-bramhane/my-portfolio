@@ -123,6 +123,8 @@ button {
 /* ---- Interactive 3D Tilt Shell & Specular Glare ---- */
 .tilt-3d-shell {
   position: relative;
+  min-width: 0;
+  max-width: 100%;
   transform-style: preserve-3d;
   transition: transform 0.22s var(--ease-snap), box-shadow 0.28s var(--ease-snap), border-color 0.28s ease;
   will-change: transform;
@@ -726,7 +728,18 @@ button {
   will-change: transform;
 }
 
-/* Smooth Midnight-Navy fade on left -> Crystal-clear Vice City sunset skyline on right */
+.hero-vice-bg-img {
+  object-fit: cover;
+  object-position: center right;
+}
+
+.mobile-vice-banner-card {
+  display: none;
+}
+
+.nowrap-token {
+  white-space: nowrap;
+}
 .hero-scrim-overlay {
   position: absolute;
   inset: 0;
@@ -1679,6 +1692,8 @@ button {
   font-family: var(--font-heading);
   font-size: 0.7rem;
   font-weight: 700;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
 .skill-chips-cloud {
@@ -2197,13 +2212,16 @@ button {
 
 .contact-neo-grid {
   display: grid;
-  grid-template-columns: 1fr 1.25fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
   gap: 32px;
   align-items: flex-start;
 }
 
 .contact-hub-card,
 .contact-form-glass-card {
+  width: 100%;
+  min-width: 0;
+  max-width: 100%;
   padding: 32px;
   border-radius: var(--radius-lg);
   background: var(--bg-panel);
@@ -2258,6 +2276,8 @@ button {
   background: rgba(8, 13, 29, 0.8);
   border: 1px solid var(--border-subtle);
   transition: all 0.2s;
+  min-width: 0;
+  max-width: 100%;
 }
 
 .connect-card:hover {
@@ -2326,6 +2346,8 @@ button {
   font-size: 0.76rem;
   font-weight: 700;
   transition: all 0.2s;
+  flex-shrink: 0;
+  white-space: nowrap;
 }
 
 .copy-chip-btn:hover { background: var(--vi-pink); color: #ffffff; }
@@ -2662,10 +2684,11 @@ button {
 
   .drawer-kicker {
     font-family: var(--font-heading);
-    font-size: 0.72rem;
+    font-size: 0.68rem;
     font-weight: 700;
-    letter-spacing: 1.8px;
+    letter-spacing: 1.2px;
     color: var(--vi-cyan);
+    white-space: nowrap;
   }
 
   .nav-menu-btn {
@@ -2690,33 +2713,196 @@ button {
   .mobile-resume-item .dock-resume-btn { width: 100%; justify-content: center; padding: 12px 16px; }
   .nav-burger { display: flex; }
 
-  .hero-neo-section { padding-top: 96px; padding-bottom: 52px; min-height: auto; }
+  .hero-neo-section {
+    padding-top: 84px;
+    padding-bottom: 44px;
+    min-height: auto;
+    background: radial-gradient(ellipse 100% 45% at 50% 0%, rgba(255, 79, 163, 0.14), transparent 70%), var(--bg-navy);
+  }
+
+  /* Hide oversized desktop full-bleed cover on mobile; show framed GitHub-style widescreen banner card instead! */
+  .hero-vice-art-layer { display: none; }
+  .desktop-hero-identity { display: none !important; }
+
   .hero-banner-stage { min-height: auto; }
-  .hero-avatar-pill-mobile { display: inline-flex; }
-  .hero-main-title { font-size: clamp(2.1rem, 8vw, 2.8rem); }
-  .hero-action-cards-row { grid-template-columns: 1fr; max-width: 100%; }
 
-  .terminal-body { padding: 14px; font-size: 0.72rem; max-height: 250px; }
-  .terminal-footer { padding: 8px 12px; font-size: 0.7rem; flex-wrap: wrap; gap: 6px; }
+  .hero-badges-row {
+    gap: 6px;
+    margin-bottom: 12px;
+  }
 
-  .hero-metrics-ribbon { grid-template-columns: repeat(2, 1fr); gap: 12px; margin-top: 34px; }
-  .metric-glass-card { padding: 14px; }
-  .metric-val { font-size: 1.65rem; }
+  .status-beacon-badge,
+  .ai-velocity-beacon,
+  .hero-avatar-pill-mobile {
+    padding: 4px 10px;
+    font-size: 0.7rem;
+  }
+
+  .hero-avatar-pill-mobile {
+    display: inline-flex;
+    padding-left: 4px;
+  }
+
+  /* Framed Widescreen GTA VI Vice City Sunset Card on Mobile (Exact GitHub Banner Style!) */
+  .mobile-vice-banner-card {
+    display: block;
+    position: relative;
+    width: 100%;
+    border-radius: 18px;
+    overflow: hidden;
+    border: 1px solid rgba(56, 189, 248, 0.35);
+    box-shadow: 0 16px 40px rgba(2, 5, 16, 0.85), 0 0 28px rgba(255, 79, 163, 0.18);
+    margin-bottom: 16px;
+    background: #090d1f;
+  }
+
+  .mobile-vice-banner-art {
+    position: relative;
+    width: 100%;
+    height: 185px;
+    overflow: hidden;
+  }
+
+  .mobile-vice-banner-scrim {
+    position: absolute;
+    inset: 0;
+    background:
+      linear-gradient(180deg, rgba(9, 13, 31, 0.1) 0%, rgba(9, 13, 31, 0.35) 60%, #090d1f 100%),
+      linear-gradient(90deg, rgba(9, 13, 31, 0.65) 0%, transparent 50%);
+  }
+
+  .mobile-vice-banner-content {
+    position: relative;
+    z-index: 2;
+    padding: 4px 16px 18px;
+    margin-top: -42px;
+  }
+
+  .mobile-vice-banner-content .hero-kicker-cyan {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+    gap: 8px;
+    margin-bottom: 4px;
+    align-items: center;
+  }
+
+  .mobile-vice-banner-content .hero-kicker-script {
+    font-size: 1.2rem;
+  }
+
+  .mobile-banner-name {
+    font-family: var(--font-heading);
+    font-size: 2rem;
+    font-weight: 800;
+    line-height: 1.08;
+    letter-spacing: -0.03em;
+    color: #ffffff;
+    margin-bottom: 8px;
+  }
+
+  .mobile-banner-stack {
+    font-family: var(--font-heading);
+    font-size: 0.84rem;
+    font-weight: 500;
+    color: #e2e8f0;
+    line-height: 1.5;
+    margin-bottom: 12px;
+  }
+
+  .mobile-banner-proof {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+
+  .m-proof-chip {
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    font-family: var(--font-heading);
+    font-size: 0.72rem;
+    font-weight: 700;
+    color: #f1f5f9;
+  }
+
+  .m-proof-chip.cyan {
+    background: rgba(34, 211, 238, 0.12);
+    border-color: rgba(34, 211, 238, 0.38);
+    color: var(--vi-aqua);
+  }
+
+  .m-proof-chip.gold {
+    background: rgba(255, 209, 102, 0.12);
+    border-color: rgba(255, 209, 102, 0.42);
+    color: var(--vi-gold);
+  }
+
+  .hero-subtext {
+    font-size: 0.88rem;
+    line-height: 1.62;
+    margin-bottom: 16px;
+  }
+
+  /* Compact 2x2 Action Pill Grid on Mobile */
+  .hero-action-cards-row {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+    max-width: 100%;
+  }
+
+  .vice-cta-card {
+    padding: 11px 12px;
+    font-size: 0.8rem;
+    gap: 8px;
+    border-radius: 12px;
+  }
+
+  .cta-icon-bubble {
+    width: 26px;
+    height: 26px;
+    border-radius: 7px;
+  }
+
+  .cta-arrow { display: none; }
+
+  .hero-metrics-ribbon { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-top: 22px; }
+  .metric-glass-card { padding: 14px 12px; border-radius: 14px; }
+  .metric-val { font-size: 1.55rem; }
+  .metric-lbl { font-size: 0.84rem; }
+  .metric-sub { font-size: 0.7rem; margin-bottom: 8px; }
   .metric-stars { display: none; }
 
-  .section-head-neo { margin-bottom: 36px; }
-  .section-headline { font-size: 2rem; }
+  .section-head-neo { margin-bottom: 32px; }
+  .section-eyebrow {
+    font-size: 0.66rem;
+    letter-spacing: 1.3px;
+    padding: 5px 12px;
+    max-width: 100%;
+  }
+  .section-headline { font-size: 1.95rem; }
+  .section-subheadline { font-size: 0.9rem; }
 
-  .bento-card { padding: 22px 18px; }
-  .avatar-frame { width: 138px; height: 138px; }
+  .bento-card { padding: 20px 16px; }
+  .avatar-frame { width: 132px; height: 132px; }
   .bio-actions-strip { flex-direction: column; }
   .btn-neo { width: 100%; justify-content: center; }
 
-  .competencies-neo-grid { grid-template-columns: repeat(2, 1fr); gap: 12px; }
-  .skills-bento-grid { grid-template-columns: 1fr; gap: 16px; }
-  .skill-chips-cloud { grid-template-columns: 1fr; gap: 8px; }
+  .competencies-neo-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .competency-bento-card { padding: 16px 13px; border-radius: 14px; }
+  .comp-icon-box { width: 36px; height: 36px; font-size: 1.15rem; }
+  .comp-pill-badge { font-size: 0.62rem; padding: 2px 7px; }
+  .comp-title { font-size: 0.96rem; margin-bottom: 6px; }
+  .comp-desc { font-size: 0.76rem; line-height: 1.5; }
 
-  .neo-filter-bar { margin-bottom: 28px; justify-content: center; }
+  .skills-bento-grid { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .skill-bento-card { padding: 20px 16px; }
+  .skill-card-head { flex-wrap: wrap; gap: 10px; }
+  .category-icon-box { width: 40px; height: 40px; font-size: 1.25rem; }
+  .category-title-neo { font-size: 1.12rem; }
+  .skill-chips-cloud { grid-template-columns: minmax(0, 1fr); gap: 8px; }
+
+  .neo-filter-bar { margin-bottom: 24px; justify-content: center; }
   .filter-pills-wrap {
     flex-wrap: wrap;
     justify-content: center;
@@ -2725,28 +2911,33 @@ button {
   }
   .neo-filter-btn { padding: 7px 13px; font-size: 0.8rem; }
 
-  .hero-split-grid { grid-template-columns: minmax(0, 1fr); }
-  .terminal-3d-wrap, .terminal-card { max-width: 100%; width: 100%; }
-
-  .projects-neo-grid { grid-template-columns: 1fr; gap: 20px; }
+  .projects-neo-grid { grid-template-columns: minmax(0, 1fr); gap: 18px; }
   .timeline-neo-row { gap: 0; }
   .timeline-node-column { display: none; }
-  .timeline-card-wrap { width: 100%; padding-bottom: 20px; }
+  .timeline-card-wrap { width: 100%; min-width: 0; padding-bottom: 18px; }
   .timeline-neo-card { padding: 20px 16px; }
 
-  .contact-neo-grid { grid-template-columns: 1fr; gap: 24px; }
-  .contact-hub-card, .contact-form-glass-card { padding: 22px 16px; }
-  .form-fields-grid { grid-template-columns: 1fr; gap: 0; }
+  .contact-neo-grid { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+  .contact-hub-card, .contact-form-glass-card { padding: 20px 16px; }
+  .connect-card { padding: 11px 12px; gap: 10px; }
+  .connect-icon-box { width: 36px; height: 36px; }
+  .connect-val { font-size: 0.8rem; }
+  .copy-chip-btn { padding: 4px 9px; font-size: 0.7rem; }
+  .form-fields-grid { grid-template-columns: minmax(0, 1fr); gap: 0; }
 
   .footer-neo-inner { flex-direction: column; gap: 18px; }
   .footer-status-side { text-align: left; }
-  .footer-bottom-row { flex-direction: column; align-items: flex-start; }
+  .footer-bottom-row { flex-direction: column; align-items: flex-start; padding-right: 48px; }
 
   /* Disable 3D tilt hover jitter on touch devices */
   .tilt-3d-shell { transform: none !important; }
   .tilt-3d-glare { display: none; }
 }
 
-@media (max-width: 400px) {
-  .competencies-neo-grid { grid-template-columns: 1fr; }
+@media (max-width: 350px) {
+  .competencies-neo-grid,
+  .hero-action-cards-row,
+  .hero-metrics-ribbon {
+    grid-template-columns: minmax(0, 1fr);
+  }
 }
